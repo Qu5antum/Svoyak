@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/lobby.css">
+    <title>Lobby</title>
+</head>
+<body>
+    <div class="container">
+
+        <h2>Лобби</h2>
+
+        <p>Привет, <b id="playerName"></b></p>
+
+        <button id="createRoomBtn">Создать комнату</button>
+
+        <div style="margin: 20px 0;">или</div>
+
+        <input
+        type="text"
+        id="roomCodeInput"
+        placeholder="Введите код комнаты"
+        maxlength="5"
+        >
+
+        <button id="joinRoomBtn">Войти</button>
+
+    </div>
+    <script type="module" src="backend/lobby.js"></script>
+</body>
+</html>
