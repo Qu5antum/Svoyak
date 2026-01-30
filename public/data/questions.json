@@ -23,7 +23,7 @@
                     "id": 1,
                     "type": "image",
                     "question": "Назовите марку авто",
-                    "image": "assets/rols_royce.png",
+                    "image": "images/rols_royce.png",
                     "options": [
                         "Rolls-Royce"
                     ]
