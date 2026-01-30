@@ -71,7 +71,7 @@ auth.onAuthStateChanged(async user => {
     statusText.textContent = `Игроков: ${Object.keys(players).length} / 4`;
 
     // кнопка старта только у ведущего
-    if (uid === hostId && Object.keys(players).length >= 2) {
+    if (uid === hostId && Object.keys(players).length == 2) {
       startBtn.style.display = "block";
     } else {
       startBtn.style.display = "none";

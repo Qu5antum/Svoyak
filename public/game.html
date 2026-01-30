@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/game.css">
+    <title>Svoyak</title>
+</head>
+<body>
+
+    <h2>Игровое поле</h2>
+
+    <div id="board"></div>
+
+    <div id="questionBox" hidden>
+    <h2 id="questionText"></h2>
+    <button id="answerBtn">Ответить</button>
+    </div>
+
+    <h3>Игроки</h3>
+    <ul id="players"></ul>
+
+    <div id="hostPanel" hidden>
+    <button id="plusBtn">+ Баллы</button>
+    <button id="minusBtn">− Баллы</button>
+    </div>
+
+    <script type="module" src="backend/game.js"></script>
+</body>
+
+</html>
