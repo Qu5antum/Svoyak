@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/room.css">
     <title>Room</title>
 </head>
 <body>
-     <h2>Комната: <span id="roomCode"></span></h2>
+    <div class="container">
+      <h2>Комната: <span id="roomCode"></span></h2>
 
-    <p>Ведущий: <strong id="playerName"></strong></p>
+      <p>Ведущий: <strong id="playerName"></strong></p>
 
-    <h3>Игроки:</h3>
-    <ul id="playersList"></ul>
+      <h3>Игроки:</h3>
+      <ul id="playersList"></ul>
 
-    <p id="statusText">Ожидание игроков...</p>
+      <p id="statusText">Ожидание игроков...</p>
 
-    <button id="startGameBtn" style="display:none">
-      Начать игру
-    </button>
+      <button id="startGameBtn" style="display:none">
+        Начать игру
+      </button>
+
+      <button id="OutButton">
+        Выйти
+      </button>
+
+    </div>
 
     <script type="module" src="backend/room.js"></script>
 </body>

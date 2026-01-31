@@ -21,6 +21,7 @@ document.getElementById("playerName").textContent = playerName;
 
 const playersList = document.getElementById("playersList");
 const startBtn = document.getElementById("startGameBtn");
+const outBtn = document.getElementById("OutButton")
 const statusText = document.getElementById("statusText");
 
 const roomRef = ref(db, "rooms/" + roomCode);
@@ -71,7 +72,7 @@ auth.onAuthStateChanged(async user => {
     statusText.textContent = `Игроков: ${Object.keys(players).length} / 4`;
 
     // кнопка старта только у ведущего
-    if (uid === hostId && Object.keys(players).length == 2) {
+    if (uid === hostId && Object.keys(players).length >= 2) {
       startBtn.style.display = "block";
     } else {
       startBtn.style.display = "none";
@@ -87,6 +88,10 @@ auth.onAuthStateChanged(async user => {
   startBtn.onclick = async () => {
     await update(roomRef, { status: "started" });
   };
+  
+  outBtn.onclick = async() => {
+    window.location.href = "lobby.html"
+  }
 
   // ===== уход игрока =====
   window.addEventListener("beforeunload", () => {
