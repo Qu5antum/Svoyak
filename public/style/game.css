@@ -175,9 +175,9 @@ button {
 .cell.used {
   background: #020617;
   color: #64748b;
-  cursor: default;
+  cursor: not-allowed;
   box-shadow: none;
-  transform: none;
+  opacity: 0.6;
 }
 
 #questionImage {

@@ -1,6 +1,9 @@
 import { db, auth } from "./firebase.js";
 import { ref, onValue, update, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
+/* ======================
+   INIT DATA
+====================== */
 const roomCode = localStorage.getItem("roomCode");
 const playerName = localStorage.getItem("playerName");
 const role = localStorage.getItem("role");
@@ -9,58 +12,28 @@ if (!roomCode || !playerName) {
   window.location.href = "index.html";
 }
 
+const roomRef = ref(db, `rooms/${roomCode}`);
+
+/* ======================
+   DOM
+====================== */
 const board = document.getElementById("board");
 const playersEl = document.getElementById("players");
 const questionBox = document.getElementById("questionBox");
 const questionText = document.getElementById("questionText");
+const questionImage = document.getElementById("questionImage");
 const answerBtn = document.getElementById("answerBtn");
 const hostPanel = document.getElementById("hostPanel");
-const questionImage = document.getElementById("questionImage");
 
-const roomRef = ref(db, "rooms/" + roomCode);
-
-// ======================
-// Загрузка вопросов
-// ======================
-
-// ===== OPEN QUESTION =====
-async function openQuestion(question, cell, score) {
-  cell.classList.add("used");
-  cell.onclick = null;
-
-  showQuestion(question);
-
-  const snap = await get(roomRef);
-  const room = snap.val() || {};
-  const used = room.usedQuestions || {};
-
-  await update(roomRef, {
-    currentQuestion: {
-      ...question,
-      score
-    },
-    answeringPlayer: null,
-    usedQuestions: {
-      ...used,
-      [`${question.theme}_${score}`]: true
-    }
-  });
-}
-// ===== HIDE QUESTION =====
-function hideQuestion() {
-  questionBox.hidden = true;
-  questionText.textContent = "";
-  questionImage.src = "";
-  questionImage.style.display = "none";
-}
-
-// ===== SHOW QUESTION =====
-function showQuestion(question) {
+/* ======================
+   QUESTION VIEW
+====================== */
+function showQuestion(q) {
   questionBox.hidden = false;
-  questionText.textContent = question.question;
+  questionText.textContent = q.question;
 
-  if (question.type === "image" && question.image) {
-    questionImage.src = question.image;
+  if (q.type === "image" && q.image) {
+    questionImage.src = q.image;
     questionImage.style.display = "block";
   } else {
     questionImage.style.display = "none";
@@ -68,15 +41,47 @@ function showQuestion(question) {
   }
 }
 
+function hideQuestion() {
+  questionBox.hidden = true;
+  questionText.textContent = "";
+  questionImage.src = "";
+  questionImage.style.display = "none";
+}
+
+/* ======================
+   OPEN QUESTION (HOST)
+====================== */
+async function openQuestion(question, cell, score, key) {
+  cell.classList.add("used");
+  cell.onclick = null;
+
+  await update(roomRef, {
+    currentQuestion: {
+      ...question,
+      score
+    },
+    answeringPlayer: null,
+    [`usedQuestions/${key}`]: true
+  });
+}
+
+/* ======================
+   LOAD BOARD
+====================== */
 async function loadQuestions() {
   try {
-    const res = await fetch("data/questions.json");
-    const data = await res.json();
+    const [roomSnap, dataSnap] = await Promise.all([
+      get(roomRef),
+      fetch("data/questions.json").then(r => r.json())
+    ]);
 
-    const themes = (data.themes || []).filter(t => t?.title);
+    const room = roomSnap.val() || {};
+    const usedQuestions = room.usedQuestions || {};
+    const themes = (dataSnap.themes || []).filter(t => t?.title);
+
     board.innerHTML = "";
 
-    // ===== THEMES ROW =====
+    /* ===== THEMES ===== */
     const themeRow = document.createElement("div");
     themeRow.className = "row theme-row";
 
@@ -89,26 +94,27 @@ async function loadQuestions() {
 
     board.appendChild(themeRow);
 
-    // ===== MAX QUESTIONS =====
-    const maxQuestions = Math.max(
-      ...themes.map(t => (t.questions || []).length)
-    );
+    /* ===== QUESTIONS ===== */
+    const maxRows = Math.max(...themes.map(t => t.questions?.length || 0));
 
-    // ===== SCORE ROWS =====
-    for (let i = 0; i < maxQuestions; i++) {
+    for (let i = 0; i < maxRows; i++) {
       const row = document.createElement("div");
       row.className = "row";
 
       themes.forEach(theme => {
-        const question = theme.questions?.[i];
+        const q = theme.questions?.[i];
         const cell = document.createElement("div");
         cell.className = "cell score-cell";
 
         const score = (i + 1) * 100;
-        cell.textContent = question ? score : "";
+        const key = `${theme.title}_${score}`;
 
-        if (question && role === "host") {
-          cell.onclick = () => openQuestion(question, cell, score);
+        cell.textContent = q ? score : "";
+
+        if (usedQuestions[key]) {
+          cell.classList.add("used");
+        } else if (q && role === "host") {
+          cell.onclick = () => openQuestion(q, cell, score, key);
         }
 
         row.appendChild(cell);
@@ -116,64 +122,49 @@ async function loadQuestions() {
 
       board.appendChild(row);
     }
-  } catch (err) {
-    console.error("Ошибка загрузки вопросов:", err);
+  } catch (e) {
+    console.error("Ошибка загрузки вопросов:", e);
   }
 }
 
-
-// ===== INIT =====
+/* ======================
+   INIT BOARD
+====================== */
 loadQuestions();
 
-
-// ======================
-// Добавление игрока при входе
-// ======================
+/* ======================
+   AUTH & REALTIME
+====================== */
 auth.onAuthStateChanged(async user => {
   if (!user) return;
+
   const uid = user.uid;
+  const player = { name: playerName };
+  if (role === "player") player.score = 0;
 
-  // ===== только участники получают score =====
-  const playerData = { name: playerName };
-  if (role === "player") {
-    playerData.score = 0;
-  }
+  await update(ref(db, `rooms/${roomCode}/players/${uid}`), player);
 
-  await update(ref(db, `rooms/${roomCode}/players/${uid}`), playerData);
-
-  // ======================
-  // REALTIME слушатель комнаты
-  // ======================
   onValue(roomRef, snap => {
     const room = snap.val();
     if (!room) return;
 
+    /* ===== PLAYERS ===== */
     playersEl.innerHTML = "";
     const players = room.players || {};
     const hostId = room.host;
 
-    // ===== сначала ведущий без баллов =====
     if (players[hostId]) {
-      const liHost = document.createElement("li");
-      liHost.textContent = `${players[hostId].name} (ведущий)`; // без баллов
-      liHost.style.fontWeight = "bold";
-      playersEl.appendChild(liHost);
+      const li = document.createElement("li");
+      li.textContent = `${players[hostId].name} (ведущий)`;
+      li.style.fontWeight = "bold";
+      playersEl.appendChild(li);
     }
 
-    // Показ текущего вопроса
-    if (room.currentQuestion) {
-      showQuestion(room.currentQuestion);
-    } else {
-      hideQuestion();
-    }
-
-    // ===== остальные игроки с баллами =====
     Object.entries(players).forEach(([id, p]) => {
       if (id === hostId) return;
       const li = document.createElement("li");
-      li.textContent = `${p.name || "Игрок"} — ${p.score || 0}`;
-      
-      // Подсветка отвечающего
+      li.textContent = `${p.name} — ${p.score ?? 0}`;
+
       if (room.answeringPlayer === id) {
         li.style.color = "#22c55e";
         li.style.fontWeight = "bold";
@@ -182,35 +173,29 @@ auth.onAuthStateChanged(async user => {
       playersEl.appendChild(li);
     });
 
-    // Показ текущего вопроса
-    questionBox.hidden = !room.currentQuestion;
-    questionText.textContent = room.currentQuestion?.question || "";
+    /* ===== QUESTION ===== */
+    room.currentQuestion ? showQuestion(room.currentQuestion) : hideQuestion();
 
-    // Панель ведущего
+    /* ===== UI ===== */
     hostPanel.hidden = role !== "host";
-
-    // Кнопка "Ответить"
-    answerBtn.disabled = role !== "player" || !room.currentQuestion || room.answeringPlayer;
+    answerBtn.disabled =
+      role !== "player" ||
+      !room.currentQuestion ||
+      room.answeringPlayer;
   });
 });
 
-// ======================
-// Ответить
-// ======================
+/* ======================
+   ANSWER BUTTON
+====================== */
 answerBtn.onclick = () => {
-  if (!auth.currentUser) {
-    alert("Ошибка: пользователь не авторизован");
-    return;
-  }
-
-  update(roomRef, {
-    answeringPlayer: auth.currentUser.uid
-  });
+  if (!auth.currentUser) return;
+  update(roomRef, { answeringPlayer: auth.currentUser.uid });
 };
 
-// ======================
-// Ведущий меняет баллы
-// ======================
+/* ======================
+   SCORE CONTROL (HOST)
+====================== */
 async function changeScore(sign) {
   const snap = await get(roomRef);
   const room = snap.val();
@@ -218,16 +203,14 @@ async function changeScore(sign) {
 
   const uid = room.answeringPlayer;
   const current = room.players?.[uid]?.score || 0;
+  const value = Number(prompt("Сколько баллов?"));
 
-  const value = prompt("Сколько баллов?");
-  const points = Number(value);
-  if (isNaN(points)) return;
+  if (isNaN(value)) return;
 
   await update(ref(db, `rooms/${roomCode}/players/${uid}`), {
-    score: current + sign * points
+    score: current + sign * value
   });
 
-  // Сброс текущего вопроса и отвечающего
   await update(roomRef, {
     currentQuestion: null,
     answeringPlayer: null
