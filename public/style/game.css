@@ -19,7 +19,7 @@ body {
 
 /* ===== CONTAINER ===== */
 .container {
-  width: 700px;
+  width: 800px;
   max-width: 95%;
   background: linear-gradient(145deg, #1e293b, #111827);
   border-radius: 16px;
@@ -36,24 +36,32 @@ h2, h3 {
   margin-bottom: 12px;
 }
 
-/* ===== BOARD ===== */
+/* ===== GRID LAYOUT ===== */
 #board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* меньше минимальная ширина */
+  gap: 10px;   /* чуть меньше промежуток между ячейками */
 }
 
+/* ===== BOARD CELLS ===== */
 .cell {
   background: #2563eb;
   color: white;
-  padding: 20px 10px;
+  padding: 12px 8px;       /* меньше отступов, блоки компактнее */
   text-align: center;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 1rem;         /* уменьшенный размер текста */
+  height: 80px;  
+  width: 80px;           /* фиксированная высота */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* hover эффект оставляем */
 .cell:hover {
   background: #1e40af;
   transform: scale(1.05);

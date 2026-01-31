@@ -27,31 +27,64 @@ async function loadQuestions() {
     const data = await res.json();
 
     const themes = data.themes || [];
-    themes.forEach(theme => {
-      const questions = theme.questions || [];
-      questions.forEach(q => {
-        const cell = document.createElement("div");
-        cell.className = "cell";
-        cell.textContent = theme.title;
+    const board = document.getElementById("board");
+    board.innerHTML = ""; // очищаем доску перед загрузкой
 
-        if (role === "host") {
+    // Создаём строку с названиями тем
+    const themeRow = document.createElement("div");
+    themeRow.className = "row theme-row";
+
+    themes.forEach(theme => {
+      const themeCell = document.createElement("div");
+      themeCell.className = "cell theme-cell";
+      themeCell.textContent = theme.title || "Без названия";
+      themeRow.appendChild(themeCell);
+    });
+
+    board.appendChild(themeRow);
+
+    // Максимальное количество вопросов в теме
+    const maxQuestions = Math.max(...themes.map(t => (t.questions || []).length));
+
+    // Создаём строки с баллами
+    for (let i = 0; i < maxQuestions; i++) {
+      const row = document.createElement("div");
+      row.className = "row";
+
+      themes.forEach(theme => {
+        const question = (theme.questions || [])[i];
+        const cell = document.createElement("div");
+        cell.className = "cell score-cell";
+
+        // Баллы: 100, 200, 300, ...
+        const score = (i + 1) * 100;
+        cell.textContent = question ? score : "";
+
+        if (question && role === "host") {
           cell.onclick = () => {
+            // Отправка вопроса в базу
             update(roomRef, {
-              currentQuestion: q,
+              currentQuestion: question,
               answeringPlayer: null
             });
+            // Можно показать вопрос на экране ведущего
+            alert(`Вопрос открыт:\n${question.question}`);
           };
         }
 
-        board.appendChild(cell);
+        row.appendChild(cell);
       });
-    });
+
+      board.appendChild(row);
+    }
+
   } catch (err) {
     console.error("Ошибка загрузки вопросов:", err);
   }
 }
 
 loadQuestions();
+
 
 // ======================
 // Добавление игрока при входе
