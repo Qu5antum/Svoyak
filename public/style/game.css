@@ -39,27 +39,29 @@ h2, h3 {
 /* ===== GRID LAYOUT ===== */
 #board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* меньше минимальная ширина */
-  gap: 10px;   /* чуть меньше промежуток между ячейками */
-}
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  column-gap: 12px;
+  row-gap: 28px;   /* 🔥 ВАЖНО: увеличенный вертикальный отступ */
+} 
 
 /* ===== BOARD CELLS ===== */
 .cell {
   background: #2563eb;
-  color: white;
-  padding: 12px 8px;       /* меньше отступов, блоки компактнее */
+  color: white; 
   text-align: center;
-  border-radius: 10px;
+  border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
-  font-size: 1rem;         /* уменьшенный размер текста */
-  height: 80px;  
-  width: 80px;           /* фиксированная высота */
+
+  aspect-ratio: 1 / 1;  
+  font-size: 1rem;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 
 /* hover эффект оставляем */
 .cell:hover {
@@ -169,3 +171,23 @@ button {
     font-size: 14px;
   }
 }
+
+.cell.used {
+  background: #020617;
+  color: #64748b;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+}
+
+#questionImage {
+  display: none;
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(37,99,235,0.8);
+  background: black;
+  padding: 10px;
+}
+

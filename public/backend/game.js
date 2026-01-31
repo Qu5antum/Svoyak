@@ -15,61 +15,100 @@ const questionBox = document.getElementById("questionBox");
 const questionText = document.getElementById("questionText");
 const answerBtn = document.getElementById("answerBtn");
 const hostPanel = document.getElementById("hostPanel");
+const questionImage = document.getElementById("questionImage");
 
 const roomRef = ref(db, "rooms/" + roomCode);
 
 // ======================
 // Загрузка вопросов
 // ======================
+
+// ===== OPEN QUESTION =====
+async function openQuestion(question, cell, score) {
+  cell.classList.add("used");
+  cell.onclick = null;
+
+  showQuestion(question);
+
+  const snap = await get(roomRef);
+  const room = snap.val() || {};
+  const used = room.usedQuestions || {};
+
+  await update(roomRef, {
+    currentQuestion: {
+      ...question,
+      score
+    },
+    answeringPlayer: null,
+    usedQuestions: {
+      ...used,
+      [`${question.theme}_${score}`]: true
+    }
+  });
+}
+// ===== HIDE QUESTION =====
+function hideQuestion() {
+  questionBox.hidden = true;
+  questionText.textContent = "";
+  questionImage.src = "";
+  questionImage.style.display = "none";
+}
+
+// ===== SHOW QUESTION =====
+function showQuestion(question) {
+  questionBox.hidden = false;
+  questionText.textContent = question.question;
+
+  if (question.type === "image" && question.image) {
+    questionImage.src = question.image;
+    questionImage.style.display = "block";
+  } else {
+    questionImage.style.display = "none";
+    questionImage.src = "";
+  }
+}
+
 async function loadQuestions() {
   try {
     const res = await fetch("data/questions.json");
     const data = await res.json();
 
-    const themes = data.themes || [];
-    const board = document.getElementById("board");
-    board.innerHTML = ""; // очищаем доску перед загрузкой
+    const themes = (data.themes || []).filter(t => t?.title);
+    board.innerHTML = "";
 
-    // Создаём строку с названиями тем
+    // ===== THEMES ROW =====
     const themeRow = document.createElement("div");
     themeRow.className = "row theme-row";
 
     themes.forEach(theme => {
-      const themeCell = document.createElement("div");
-      themeCell.className = "cell theme-cell";
-      themeCell.textContent = theme.title || "Без названия";
-      themeRow.appendChild(themeCell);
+      const cell = document.createElement("div");
+      cell.className = "cell theme-cell";
+      cell.textContent = theme.title;
+      themeRow.appendChild(cell);
     });
 
     board.appendChild(themeRow);
 
-    // Максимальное количество вопросов в теме
-    const maxQuestions = Math.max(...themes.map(t => (t.questions || []).length));
+    // ===== MAX QUESTIONS =====
+    const maxQuestions = Math.max(
+      ...themes.map(t => (t.questions || []).length)
+    );
 
-    // Создаём строки с баллами
+    // ===== SCORE ROWS =====
     for (let i = 0; i < maxQuestions; i++) {
       const row = document.createElement("div");
       row.className = "row";
 
       themes.forEach(theme => {
-        const question = (theme.questions || [])[i];
+        const question = theme.questions?.[i];
         const cell = document.createElement("div");
         cell.className = "cell score-cell";
 
-        // Баллы: 100, 200, 300, ...
         const score = (i + 1) * 100;
         cell.textContent = question ? score : "";
 
         if (question && role === "host") {
-          cell.onclick = () => {
-            // Отправка вопроса в базу
-            update(roomRef, {
-              currentQuestion: question,
-              answeringPlayer: null
-            });
-            // Можно показать вопрос на экране ведущего
-            alert(`Вопрос открыт:\n${question.question}`);
-          };
+          cell.onclick = () => openQuestion(question, cell, score);
         }
 
         row.appendChild(cell);
@@ -77,12 +116,13 @@ async function loadQuestions() {
 
       board.appendChild(row);
     }
-
   } catch (err) {
     console.error("Ошибка загрузки вопросов:", err);
   }
 }
 
+
+// ===== INIT =====
 loadQuestions();
 
 
@@ -118,6 +158,13 @@ auth.onAuthStateChanged(async user => {
       liHost.textContent = `${players[hostId].name} (ведущий)`; // без баллов
       liHost.style.fontWeight = "bold";
       playersEl.appendChild(liHost);
+    }
+
+    // Показ текущего вопроса
+    if (room.currentQuestion) {
+      showQuestion(room.currentQuestion);
+    } else {
+      hideQuestion();
     }
 
     // ===== остальные игроки с баллами =====
