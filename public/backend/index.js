@@ -14,8 +14,8 @@ if (savedName) {
 btn.addEventListener("click", async () => {
   const name = input.value.trim();
 
-  if (name.length < 2) {
-    alert("Имя должно быть минимум 2 символа");
+  if (name.length < 5 && name.length > 15) {
+    alert("Имя должно быть минимум 5 символа и максимум 14 символов");
     return;
   }
 

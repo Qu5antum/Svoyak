@@ -139,16 +139,30 @@ auth.onAuthStateChanged(async user => {
   if (!user) return;
 
   const uid = user.uid;
-  const player = { name: playerName };
-  if (role === "player") player.score = 0;
+  const playerRef = ref(db, `rooms/${roomCode}/players/${uid}`);
 
-  await update(ref(db, `rooms/${roomCode}/players/${uid}`), player);
+  const snap = await get(playerRef);
+  const existingPlayer = snap.val();
 
+  // Если игрок уже есть — НЕ ТРОГАЕМ score
+  if (existingPlayer) {
+    await update(playerRef, {
+      name: playerName
+    });
+  } 
+  // Если игрок новый — создаём с 0 баллов
+  else {
+    const player = { name: playerName };
+    if (role === "player") player.score = 0;
+
+    await update(playerRef, player);
+  }
+
+  /* ===== REALTIME LISTENER ===== */
   onValue(roomRef, snap => {
     const room = snap.val();
     if (!room) return;
 
-    /* ===== PLAYERS ===== */
     playersEl.innerHTML = "";
     const players = room.players || {};
     const hostId = room.host;
@@ -173,10 +187,8 @@ auth.onAuthStateChanged(async user => {
       playersEl.appendChild(li);
     });
 
-    /* ===== QUESTION ===== */
     room.currentQuestion ? showQuestion(room.currentQuestion) : hideQuestion();
 
-    /* ===== UI ===== */
     hostPanel.hidden = role !== "host";
     answerBtn.disabled =
       role !== "player" ||
@@ -184,6 +196,7 @@ auth.onAuthStateChanged(async user => {
       room.answeringPlayer;
   });
 });
+
 
 /* ======================
    ANSWER BUTTON
