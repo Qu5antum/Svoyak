@@ -25,6 +25,9 @@ const questionImage = document.getElementById("questionImage");
 const answerBtn = document.getElementById("answerBtn");
 const hostPanel = document.getElementById("hostPanel");
 
+const answerBox = document.getElementById("answerBox");
+const answerText = document.getElementById("answerText");
+
 /* ======================
    QUESTION VIEW
 ====================== */
@@ -39,6 +42,17 @@ function showQuestion(q) {
     questionImage.style.display = "none";
     questionImage.src = "";
   }
+
+  if (
+    role === "host" ||      // ведущий всегда видит
+    showAnswer === true     // либо все после завершения
+  ) {
+    answerText.textContent = q.options.join(", ");
+    answerBox.hidden = false;
+  } else {
+    answerBox.hidden = true;
+    answerText.textContent = "";
+  }
 }
 
 function hideQuestion() {
@@ -46,6 +60,8 @@ function hideQuestion() {
   questionText.textContent = "";
   questionImage.src = "";
   questionImage.style.display = "none";
+  answerBox.hidden = true;
+  answerText.textContent = "";
 }
 
 /* ======================

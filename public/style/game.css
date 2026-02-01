@@ -85,6 +85,16 @@ h2, h3 {
   margin-bottom: 12px;
 }
 
+#answerBox {
+  margin-top: 15px;
+  padding: 12px;
+  background: #020617;
+  border-radius: 10px;
+  border: 1px dashed #22c55e;
+  color: #22c55e;
+  text-align: center;
+}
+
 /* ===== BUTTONS ===== */
 button {
   padding: 12px 25px;
