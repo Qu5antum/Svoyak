@@ -167,6 +167,14 @@ auth.onAuthStateChanged(async user => {
     const players = room.players || {};
     const hostId = room.host;
 
+    const hasAnsweringPlayer = !!room.answeringPlayer;
+
+    document.getElementById("plusBtn").style.display =
+      role === "host" && hasAnsweringPlayer ? "inline-block" : "none";
+
+    document.getElementById("minusBtn").style.display =
+      role === "host" && hasAnsweringPlayer ? "inline-block" : "none";
+
     if (players[hostId]) {
       const li = document.createElement("li");
       li.textContent = `${players[hostId].name} (ведущий)`;
@@ -189,11 +197,13 @@ auth.onAuthStateChanged(async user => {
 
     room.currentQuestion ? showQuestion(room.currentQuestion) : hideQuestion();
 
-    hostPanel.hidden = role !== "host";
+    answerBtn.hidden = role !== "player";
     answerBtn.disabled =
       role !== "player" ||
       !room.currentQuestion ||
-      room.answeringPlayer;
+      !!room.answeringPlayer;
+
+    hostPanel.hidden = role !== "host";
   });
 });
 

@@ -19,7 +19,8 @@ body {
 
 /* ===== CONTAINER ===== */
 .container {
-  width: 800px;
+  width: 900px;
+  height: 100%;
   max-width: 95%;
   background: linear-gradient(145deg, #1e293b, #111827);
   border-radius: 16px;
@@ -97,6 +98,7 @@ button {
 
 #answerBtn {
   background: #22c55e;
+  
 }
 
 #answerBtn:hover {
