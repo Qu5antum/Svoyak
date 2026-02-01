@@ -107,11 +107,20 @@ button {
 }
 
 #answerBtn {
-  background: #22c55e;
-  
+  background: rgb(18, 202, 18);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgb(7, 71, 7);
+  transition: all 0.2s ease;
 }
 
 #answerBtn:hover {
+  transform: translateY(-2px);
   background: #16a34a;
 }
 
@@ -121,6 +130,7 @@ button {
 }
 
 #plusBtn:hover, #minusBtn:hover {
+  transform: translateY(-2px);
   background: #d97706;
 }
 

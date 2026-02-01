@@ -32,7 +32,7 @@ const endBtn = document.getElementById("EndBtn");
 /* ======================
    QUESTION VIEW
 ====================== */
-function showQuestion(q) {
+function showQuestion(q, room) {
   questionBox.hidden = false;
   questionText.textContent = q.question;
 
@@ -44,6 +44,7 @@ function showQuestion(q) {
     questionImage.src = "";
   }
 }
+
 
 function hideQuestion() {
   questionBox.hidden = true;
@@ -190,13 +191,19 @@ auth.onAuthStateChanged(async user => {
       playersEl.appendChild(li);
     }
 
-    if (room.showAnswer && room.currentQuestion?.answer) {
+    if (
+      room.currentQuestion &&
+      (role === "host" || room.showAnswer === true)
+    ) {
       answerBox.hidden = false;
-      answerText.textContent = "Ответ: " + room.currentQuestion.answer;
+      answerText.textContent =
+        room.currentQuestion.options.join(", ");
     } else {
       answerBox.hidden = true;
       answerText.textContent = "";
     }
+
+
 
     document.getElementById("hostEnd").hidden =
         role !== "host" || !room.currentQuestion;
@@ -217,6 +224,7 @@ auth.onAuthStateChanged(async user => {
     });
 
     room.currentQuestion ? showQuestion(room.currentQuestion) : hideQuestion();
+
     const blocked = room.blockedPlayers || {};
 
     answerBtn.hidden = role !== "player";
@@ -224,6 +232,7 @@ auth.onAuthStateChanged(async user => {
       role !== "player" ||
       !room.currentQuestion ||
       !!room.answeringPlayer ||
+      room.showAnswer === true ||
       blocked[auth.currentUser?.uid];
 
     hostPanel.hidden = role !== "host";
