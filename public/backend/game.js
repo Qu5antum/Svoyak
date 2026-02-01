@@ -27,6 +27,7 @@ const hostPanel = document.getElementById("hostPanel");
 
 const answerBox = document.getElementById("answerBox");
 const answerText = document.getElementById("answerText");
+const endBtn = document.getElementById("EndBtn");
 
 /* ======================
    QUESTION VIEW
@@ -41,17 +42,6 @@ function showQuestion(q) {
   } else {
     questionImage.style.display = "none";
     questionImage.src = "";
-  }
-
-  if (
-    role === "host" ||      // ведущий всегда видит
-    showAnswer === true     // либо все после завершения
-  ) {
-    answerText.textContent = q.options.join(", ");
-    answerBox.hidden = false;
-  } else {
-    answerBox.hidden = true;
-    answerText.textContent = "";
   }
 }
 
@@ -77,6 +67,8 @@ async function openQuestion(question, cell, score, key) {
       score
     },
     answeringPlayer: null,
+    blockedPlayers: null,
+    showAnswer: false,  
     [`usedQuestions/${key}`]: true
   });
 }
@@ -198,6 +190,17 @@ auth.onAuthStateChanged(async user => {
       playersEl.appendChild(li);
     }
 
+    if (room.showAnswer && room.currentQuestion?.answer) {
+      answerBox.hidden = false;
+      answerText.textContent = "Ответ: " + room.currentQuestion.answer;
+    } else {
+      answerBox.hidden = true;
+      answerText.textContent = "";
+    }
+
+    document.getElementById("hostEnd").hidden =
+        role !== "host" || !room.currentQuestion;
+
     Object.entries(players).forEach(([id, p]) => {
       if (id === hostId) return;
       const li = document.createElement("li");
@@ -209,15 +212,19 @@ auth.onAuthStateChanged(async user => {
       }
 
       playersEl.appendChild(li);
+
+      
     });
 
     room.currentQuestion ? showQuestion(room.currentQuestion) : hideQuestion();
+    const blocked = room.blockedPlayers || {};
 
     answerBtn.hidden = role !== "player";
     answerBtn.disabled =
       role !== "player" ||
       !room.currentQuestion ||
-      !!room.answeringPlayer;
+      !!room.answeringPlayer ||
+      blocked[auth.currentUser?.uid];
 
     hostPanel.hidden = role !== "host";
   });
@@ -229,7 +236,11 @@ auth.onAuthStateChanged(async user => {
 ====================== */
 answerBtn.onclick = () => {
   if (!auth.currentUser) return;
-  update(roomRef, { answeringPlayer: auth.currentUser.uid });
+
+  // защита от повторного нажатия
+  update(roomRef, {
+    answeringPlayer: auth.currentUser.uid
+  });
 };
 
 /* ======================
@@ -243,18 +254,39 @@ async function changeScore(sign) {
   const uid = room.answeringPlayer;
   const current = room.players?.[uid]?.score || 0;
   const value = Number(prompt("Сколько баллов?"));
-
   if (isNaN(value)) return;
 
+  // меняем счёт
   await update(ref(db, `rooms/${roomCode}/players/${uid}`), {
     score: current + sign * value
   });
 
+  //  НЕПРАВИЛЬНЫЙ ОТВЕТ
+  if (sign === -1) {
+    await update(roomRef, {
+      answeringPlayer: null,
+      [`blockedPlayers/${uid}`]: true
+    });
+    return;
+  }
+
+  //  ПРАВИЛЬНЫЙ ОТВЕТ
   await update(roomRef, {
     currentQuestion: null,
-    answeringPlayer: null
+    answeringPlayer: null,
+    blockedPlayers: null
   });
 }
 
+
+endBtn.onclick = async () => {
+  await update(roomRef, {
+    showAnswer: true,
+    answeringPlayer: null,
+    blockedPlayers: null
+  });
+};
+
 document.getElementById("plusBtn").onclick = () => changeScore(1);
 document.getElementById("minusBtn").onclick = () => changeScore(-1);
+
