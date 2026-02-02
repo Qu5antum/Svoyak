@@ -73,6 +73,8 @@ h2, h3 {
 
 /* ===== QUESTION BOX ===== */
 #questionBox {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
   background: #1e293b;
   padding: 18px;
   border-radius: 10px;
@@ -166,6 +168,30 @@ button {
 #EndBtn:disabled {
   opacity: 0.6;
   cursor: no
+}
+
+#GameEndBtn {
+  margin-top: 16px;
+  text-align: right;
+}
+
+#gameEndBtn { 
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.35);
+  transition: all 0.2s ease;
+}
+
+#gameEndBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(239, 68, 68, 0.45);
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
 }
 
 /* ===== PLAYERS LIST ===== */
@@ -338,6 +364,22 @@ button {
   #players li {
     font-size: 0.85rem;
   }
+}
+
+/* ===== PAGE FADE IN ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 

@@ -28,6 +28,20 @@ const hostPanel = document.getElementById("hostPanel");
 const answerBox = document.getElementById("answerBox");
 const answerText = document.getElementById("answerText");
 const endBtn = document.getElementById("EndBtn");
+const GameEndButton = document.getElementById("gameEndBtn");
+const gameEndWrapper = document.getElementById("GameEndBtn");
+
+
+
+// shuffle themes
+function shuffle(array) {
+  const arr = [...array]; 
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
 
 /* ======================
    QUESTION VIEW
@@ -84,9 +98,24 @@ async function loadQuestions() {
       fetch("data/questions.json").then(r => r.json())
     ]);
 
-    const room = roomSnap.val() || {};
+    let room = roomSnap.val() || {};
     const usedQuestions = room.usedQuestions || {};
-    const themes = (dataSnap.themes || []).filter(t => t?.title);
+    const allThemes = (dataSnap.themes || []).filter(t => t?.title);
+
+    if (role === "host" && !room.selectedThemes) {
+      const selected = shuffle(allThemes).slice(0, 5);
+
+      await update(roomRef, {
+        selectedThemes: selected
+      });
+
+      room = {
+        ...room,
+        selectedThemes: selected
+      };
+    }
+
+    const themes = room.selectedThemes || [];
 
     board.innerHTML = "";
 
@@ -171,6 +200,17 @@ auth.onAuthStateChanged(async user => {
   onValue(roomRef, snap => {
     const room = snap.val();
     if (!room) return;
+
+    if (room.gameEnded) {
+      window.location.href = "end_game.html";
+      return;
+    }
+
+    if (role === "host" && !room.gameEnded) {
+      gameEndWrapper.hidden = false;
+    } else {
+      gameEndWrapper.hidden = true;
+    }
 
     playersEl.innerHTML = "";
     const players = room.players || {};
@@ -295,6 +335,12 @@ endBtn.onclick = async () => {
     blockedPlayers: null
   });
 };
+
+GameEndButton.onclick = async () => {
+  await update(roomRef, {
+    gameEnded: true,
+  });
+}
 
 document.getElementById("plusBtn").onclick = () => changeScore(1);
 document.getElementById("minusBtn").onclick = () => changeScore(-1);
