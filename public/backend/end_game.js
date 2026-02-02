@@ -14,6 +14,7 @@ if (!room?.players) {
   podium.innerHTML = "<p>Нет данных</p>";
 } else {
   const players = Object.values(room.players)
+    .filter(player => typeof player.score === "number")
     .sort((a, b) => b.score - a.score)
     .slice(0, 3);
 
@@ -36,5 +37,5 @@ if (!room?.players) {
 }
 
 backBtn.onclick = () => {
-  window.location.href = "game.html";
+  window.location.href = "lobby.html";
 };
