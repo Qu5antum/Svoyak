@@ -1,11 +1,9 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
   font-family: 'Orbitron', sans-serif;
   min-height: 100vh;
@@ -22,8 +20,6 @@ body {
   0% { background-position: top; }
   100% { background-position: bottom; }
 }
-
-/* ===== CONTAINER ===== */
 .container {
   background: linear-gradient(145deg, #0f172a, #1e293b);
   padding: 40px;
@@ -45,7 +41,6 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ===== HEADER ===== */
 h2 {
   font-size: 28px;
   margin-bottom: 5px;
@@ -61,7 +56,6 @@ strong {
   color: #3b82f6;
 }
 
-/* ===== PLAYERS LIST ===== */
 ul#playersList {
   list-style: none;
   padding: 10px;
@@ -107,13 +101,11 @@ ul#playersList li.host {
   font-weight: bold;
 }
 
-/* ===== STATUS TEXT ===== */
 #statusText {
   font-size: 14px;
   color: #94a3b8;
 }
 
-/* ===== BUTTON ===== */
 button {
   padding: 12px 25px;
   background: linear-gradient(135deg, #2563eb, #3b82f6);
@@ -153,7 +145,6 @@ button:active {
   transform: scale(0.97);
 }
 
-/* ===== HOST PANEL ===== */
 #hostPanel {
   margin-top: 15px;
   background: #1e293b;
@@ -163,7 +154,6 @@ button:active {
   box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
 }
 
-/* ===== MEDIA QUERIES ===== */
 @media (max-width: 480px) {
   .container {
     width: 90%;

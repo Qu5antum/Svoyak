@@ -1,11 +1,9 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
   font-family: 'Roboto', sans-serif;
   background: #0f172a;
@@ -17,7 +15,6 @@ body {
   padding: 20px;
 }
 
-/* ===== CONTAINER ===== */
 .container {
   width: 900px;
   height: 100%;
@@ -31,21 +28,17 @@ body {
   gap: 25px;
 }
 
-/* ===== HEADERS ===== */
 h2, h3 {
   font-weight: 600;
   margin-bottom: 12px;
 }
 
-/* ===== GRID LAYOUT ===== */
 #board {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   column-gap: 12px;
-  row-gap: 28px;   /* 🔥 ВАЖНО: увеличенный вертикальный отступ */
+  row-gap: 28px;  
 } 
-
-/* ===== BOARD CELLS ===== */
 .cell {
   background: #2563eb;
   color: white; 
@@ -63,15 +56,12 @@ h2, h3 {
   align-items: center;
 }
 
-
-/* hover эффект оставляем */
 .cell:hover {
   background: #1e40af;
   transform: scale(1.05);
   box-shadow: 0 0 12px #3b82f6;
 }
 
-/* ===== QUESTION BOX ===== */
 #questionBox {
   opacity: 0;
   animation: fadeIn 0.6s ease-out forwards;
@@ -194,7 +184,6 @@ button {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
 }
 
-/* ===== PLAYERS LIST ===== */
 #players {
   list-style: none;
   display: flex;
@@ -212,8 +201,6 @@ button {
   font-weight: 500;
   transition: 0.2s;
 }
-
-/* Подсветка текущего отвечающего */
 #players li.active {
   background: #22c55e;
   color: #fff;
@@ -221,20 +208,17 @@ button {
   box-shadow: 0 0 12px #22c55e;
 }
 
-/* Ведущий (без баллов) */
 #players li.host {
   border: 2px solid #3b82f6;
   font-weight: bold;
 }
 
-/* ===== HOST PANEL ===== */
 #hostPanel {
   display: flex;
   gap: 12px;
   margin-top: 10px;
 }
 
-/* ===== MEDIA QUERIES ===== */
 @media (max-width: 500px) {
   .container {
     padding: 20px;
@@ -273,9 +257,6 @@ button {
   padding: 10px;
 }
 
-/* =========================
-   MOBILE & TABLET
-========================= */
 
 @media (max-width: 768px) {
 
@@ -291,7 +272,6 @@ button {
     gap: 18px;
   }
 
-  /* ===== BOARD ===== */
   #board {
     overflow-x: auto;
     padding-bottom: 10px;
@@ -300,7 +280,7 @@ button {
   .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-    gap: 14px; /* ВАЖНО: вертикальный зазор */
+    gap: 14px; 
     margin-bottom: 14px;
   }
 
@@ -316,8 +296,6 @@ button {
     padding: 6px;
     height: auto;
   }
-
-  /* ===== QUESTION ===== */
   #questionText {
     font-size: 1.1rem;
   }
@@ -327,7 +305,6 @@ button {
     margin-top: 10px;
   }
 
-  /* ===== BUTTONS ===== */
   button {
     width: 100%;
     padding: 14px;
@@ -339,17 +316,11 @@ button {
     gap: 10px;
   }
 
-  /* ===== PLAYERS ===== */
   #players li {
     font-size: 0.9rem;
     padding: 10px;
   }
 }
-
-/* =========================
-   SMALL PHONES
-========================= */
-
 @media (max-width: 420px) {
 
   .cell {
@@ -366,7 +337,6 @@ button {
   }
 }
 
-/* ===== PAGE FADE IN ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;

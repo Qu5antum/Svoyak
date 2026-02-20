@@ -6,13 +6,13 @@
 
 body {
   font-family: "Orbitron", sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: radial-gradient(circle at top, #1e293b, #020617);
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @keyframes fadeIn {
@@ -28,44 +28,52 @@ body {
 
 .container {
   background: linear-gradient(145deg, #0f172a, #1e293b);
-  padding: 45px;
+  padding: 40px;
   border-radius: 18px;
   text-align: center;
-  width: 500px;
-  animation: fadeIn 0.7s ease;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 0.6s ease;
   box-shadow: 0 0 30px rgba(37, 99, 235, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .loginContainer {
-  position: fixed;       
-  top: 0;                 
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%;            
-  
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
-  padding: 15px 30px;     
-  box-sizing: border-box;
-
-  z-index: 1000;          
+  padding: 15px 25px;
+  z-index: 1000;
 }
 
-.loginContainer .button {
-  margin-right: 10px;
+.buttonAccount {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttonAccount:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #2563eb;
 }
 
 .lable {
   display: flex;
   align-items: center;
 }
-
 h2 {
   margin-bottom: 15px;
   font-size: 26px;
-  letter-spacing: 1px;
 }
 
 p {
@@ -74,7 +82,8 @@ p {
 }
 
 input {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   padding: 14px;
   margin-top: 10px;
   border-radius: 10px;
@@ -92,13 +101,14 @@ input::placeholder {
 }
 
 input:focus {
-  box-shadow: 0 0 18px #3b82f6;
+  box-shadow: 0 0 15px #3b82f6;
   transform: scale(1.03);
 }
 
 button {
-  margin-top: 20px;
-  width: 220px;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 240px;
   padding: 14px;
   background: linear-gradient(135deg, #2563eb, #3b82f6);
   border: none;
@@ -108,52 +118,7 @@ button {
   cursor: pointer;
   transition: 0.3s;
   position: relative;
-  overflow: hidden;  
-}
-
-.buttonAccount {
-  display: flex;
-  align-items: center;     
-  justify-content: center;  
-  gap: 8px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -340px;
-  width: 340px;
-  height: 100%;
-  background: #020617;
-  color: white;
-  transition: 0.3s;
-  z-index: 2000;
-  padding: 20px;
-}
-
-.sidebar.active {
-  right: 0;
-}
-
-.sidebarContent {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#closeSidebarBtn {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-#closeSidebarBtn svg {
-  fill: white;
+  overflow: hidden;
 }
 
 button::after {
@@ -173,29 +138,61 @@ button:hover::after {
 }
 
 button:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 25px #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #2563eb;
 }
 
 button:active {
   transform: scale(0.97);
 }
 
-.container div {
-  margin: 20px 0;
-  color: #94a3b8;
-  font-size: 14px;
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 320px;
+  height: 100%;
+  background: #020617;
+  color: white;
+  transition: 0.3s ease;
+  z-index: 2000;
+  padding: 20px;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#closeSidebarBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#closeSidebarBtn svg {
+  fill: white;
 }
 
 @media (max-width: 480px) {
 
   body {
-    padding: 20px;
+    padding: 15px;
   }
 
   .container {
-    width: 100%;
-    padding: 30px 20px;
+    padding: 25px 15px;
     border-radius: 14px;
   }
 
@@ -203,17 +200,26 @@ button:active {
     font-size: 22px;
   }
 
+  p {
+    font-size: 14px;
+  }
+
   input {
-    width: 100%;
+    max-width: 100%;
     font-size: 15px;
   }
 
   button {
+    max-width: none;
     width: 100%;
     font-size: 15px;
   }
 
-  p {
-    font-size: 14px;
+  .buttonAccount {
+    transform: scale(0.9);
+  }
+
+  .sidebar {
+    width: 100%;
   }
 }
