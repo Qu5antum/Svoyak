@@ -1,11 +1,9 @@
-/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BACKGROUND ===== */
 body {
   font-family: "Orbitron", sans-serif;
   height: 100vh;
@@ -17,7 +15,6 @@ body {
   overflow: hidden;
 }
 
-/* ===== FADE IN ===== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -29,7 +26,6 @@ body {
   }
 }
 
-/* ===== CONTAINER ===== */
 .container {
   background: linear-gradient(145deg, #0f172a, #1e293b);
   padding: 45px;
@@ -41,7 +37,31 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* ===== TITLES ===== */
+.loginContainer {
+  position: fixed;       
+  top: 0;                 
+  left: 0;
+  width: 100%;            
+  
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 15px 30px;     
+  box-sizing: border-box;
+
+  z-index: 1000;          
+}
+
+.loginContainer .button {
+  margin-right: 10px;
+}
+
+.lable {
+  display: flex;
+  align-items: center;
+}
+
 h2 {
   margin-bottom: 15px;
   font-size: 26px;
@@ -53,7 +73,6 @@ p {
   color: #c7d2fe;
 }
 
-/* ===== INPUT ===== */
 input {
   width: 300px;
   padding: 14px;
@@ -77,7 +96,6 @@ input:focus {
   transform: scale(1.03);
 }
 
-/* ===== BUTTON ===== */
 button {
   margin-top: 20px;
   width: 220px;
@@ -90,7 +108,52 @@ button {
   cursor: pointer;
   transition: 0.3s;
   position: relative;
-  overflow: hidden;
+  overflow: hidden;  
+}
+
+.buttonAccount {
+  display: flex;
+  align-items: center;     
+  justify-content: center;  
+  gap: 8px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -340px;
+  width: 340px;
+  height: 100%;
+  background: #020617;
+  color: white;
+  transition: 0.3s;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebarContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#closeSidebarBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#closeSidebarBtn svg {
+  fill: white;
 }
 
 button::after {
@@ -118,14 +181,12 @@ button:active {
   transform: scale(0.97);
 }
 
-/* ===== OR TEXT ===== */
 .container div {
   margin: 20px 0;
   color: #94a3b8;
   font-size: 14px;
 }
 
-/* ===== MOBILE ADAPTATION ===== */
 @media (max-width: 480px) {
 
   body {

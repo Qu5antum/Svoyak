@@ -1,9 +1,6 @@
 import { db, auth } from "./firebase.js";
 import { ref, onValue, update, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
 
-/* ======================
-   INIT DATA
-====================== */
 const roomCode = localStorage.getItem("roomCode");
 const playerName = localStorage.getItem("playerName");
 const role = localStorage.getItem("role");
@@ -14,9 +11,6 @@ if (!roomCode || !playerName) {
 
 const roomRef = ref(db, `rooms/${roomCode}`);
 
-/* ======================
-   DOM
-====================== */
 const board = document.getElementById("board");
 const playersEl = document.getElementById("players");
 const questionBox = document.getElementById("questionBox");
@@ -32,7 +26,6 @@ const GameEndButton = document.getElementById("gameEndBtn");
 const gameEndWrapper = document.getElementById("GameEndBtn");
 
 
-
 // shuffle themes
 function shuffle(array) {
   const arr = [...array]; 
@@ -43,9 +36,6 @@ function shuffle(array) {
   return arr;
 }
 
-/* ======================
-   QUESTION VIEW
-====================== */
 function showQuestion(q, room) {
   questionBox.hidden = false;
   questionText.textContent = q.question;
@@ -59,7 +49,6 @@ function showQuestion(q, room) {
   }
 }
 
-
 function hideQuestion() {
   questionBox.hidden = true;
   questionText.textContent = "";
@@ -69,9 +58,6 @@ function hideQuestion() {
   answerText.textContent = "";
 }
 
-/* ======================
-   OPEN QUESTION (HOST)
-====================== */
 async function openQuestion(question, cell, score, key) {
   cell.classList.add("used");
   cell.onclick = null;
@@ -88,9 +74,6 @@ async function openQuestion(question, cell, score, key) {
   });
 }
 
-/* ======================
-   LOAD BOARD
-====================== */
 async function loadQuestions() {
   try {
     const [roomSnap, dataSnap] = await Promise.all([
@@ -165,14 +148,8 @@ async function loadQuestions() {
   }
 }
 
-/* ======================
-   INIT BOARD
-====================== */
 loadQuestions();
 
-/* ======================
-   AUTH & REALTIME
-====================== */
 auth.onAuthStateChanged(async user => {
   if (!user) return;
 
@@ -279,10 +256,6 @@ auth.onAuthStateChanged(async user => {
   });
 });
 
-
-/* ======================
-   ANSWER BUTTON
-====================== */
 answerBtn.onclick = () => {
   if (!auth.currentUser) return;
 
@@ -292,9 +265,6 @@ answerBtn.onclick = () => {
   });
 };
 
-/* ======================
-   SCORE CONTROL (HOST)
-====================== */
 async function changeScore(sign) {
   const snap = await get(roomRef);
   const room = snap.val();
