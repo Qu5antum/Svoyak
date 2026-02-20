@@ -184,6 +184,25 @@ button {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
 }
 
+#shuffleBtn {
+  background: linear-gradient(135deg, rgb(85, 85, 232), rgb(20, 20, 217));
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgb(33, 33, 93);
+  transition: all 0.2s ease;
+}
+
+#shuffleBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgb(4, 4, 161);
+  background: linear-gradient(135deg, rgb(42, 42, 179), rgb(21, 21, 145));
+}
+
 #players {
   list-style: none;
   display: flex;
@@ -256,7 +275,6 @@ button {
   background: black;
   padding: 10px;
 }
-
 
 @media (max-width: 768px) {
 

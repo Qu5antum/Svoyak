@@ -25,6 +25,10 @@ const endBtn = document.getElementById("EndBtn");
 const GameEndButton = document.getElementById("gameEndBtn");
 const gameEndWrapper = document.getElementById("GameEndBtn");
 
+const shuffleBtn = document.getElementById("shuffleBtn");
+let lastThemes = null;
+let lastQuestionId = null;
+
 
 // shuffle themes
 function shuffle(array) {
@@ -34,6 +38,13 @@ function shuffle(array) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+function shuffleThemes(themes) {
+  return themes.map(theme => ({
+    ...theme,
+    questions: shuffle(theme.questions || [])
+  }));
 }
 
 function showQuestion(q, room) {
@@ -173,8 +184,8 @@ auth.onAuthStateChanged(async user => {
     await update(playerRef, player);
   }
 
-  /* ===== REALTIME LISTENER ===== */
-  onValue(roomRef, snap => {
+  /*REALTIME LISTENER*/
+  onValue(roomRef, (snap) => {
     const room = snap.val();
     if (!room) return;
 
@@ -183,12 +194,33 @@ auth.onAuthStateChanged(async user => {
       return;
     }
 
-    if (role === "host" && !room.gameEnded) {
-      gameEndWrapper.hidden = false;
-    } else {
-      gameEndWrapper.hidden = true;
+    if (JSON.stringify(room.selectedThemes) !== JSON.stringify(lastThemes)) {
+      lastThemes = room.selectedThemes;
+      loadQuestions();
     }
 
+    const currentQId = room.currentQuestion?.id || null;
+
+    if (currentQId !== lastQuestionId) {
+      lastQuestionId = currentQId;
+
+      if (room.currentQuestion) {
+        showQuestion(room.currentQuestion);
+      } else {
+        hideQuestion();
+      }
+    }
+
+    const selection = document.getElementById("questionSelection");
+    if (selection) {
+      selection.style.display = room.currentQuestion ? "none" : "block";
+    }
+    gameEndWrapper.hidden = !(role === "host" && !room.gameEnded);
+
+    document.getElementById("hostEnd").hidden =
+      role !== "host" || !room.currentQuestion;
+
+    hostPanel.hidden = role !== "host";
     playersEl.innerHTML = "";
     const players = room.players || {};
     const hostId = room.host;
@@ -208,25 +240,10 @@ auth.onAuthStateChanged(async user => {
       playersEl.appendChild(li);
     }
 
-    if (
-      room.currentQuestion &&
-      (role === "host" || room.showAnswer === true)
-    ) {
-      answerBox.hidden = false;
-      answerText.textContent =
-        room.currentQuestion.options.join(", ");
-    } else {
-      answerBox.hidden = true;
-      answerText.textContent = "";
-    }
-
-
-
-    document.getElementById("hostEnd").hidden =
-        role !== "host" || !room.currentQuestion;
-
+    // остальные игроки
     Object.entries(players).forEach(([id, p]) => {
       if (id === hostId) return;
+
       const li = document.createElement("li");
       li.textContent = `${p.name} — ${p.score ?? 0}`;
 
@@ -236,12 +253,18 @@ auth.onAuthStateChanged(async user => {
       }
 
       playersEl.appendChild(li);
-
-      
     });
 
-    room.currentQuestion ? showQuestion(room.currentQuestion) : hideQuestion();
-
+    if (
+      room.currentQuestion &&
+      (role === "host" || room.showAnswer === true)
+    ) {
+      answerBox.hidden = false;
+      answerText.textContent = room.currentQuestion.options.join(", ");
+    } else {
+      answerBox.hidden = true;
+      answerText.textContent = "";
+    }
     const blocked = room.blockedPlayers || {};
 
     answerBtn.hidden = role !== "player";
@@ -251,8 +274,6 @@ auth.onAuthStateChanged(async user => {
       !!room.answeringPlayer ||
       room.showAnswer === true ||
       blocked[auth.currentUser?.uid];
-
-    hostPanel.hidden = role !== "host";
   });
 });
 
@@ -310,6 +331,32 @@ GameEndButton.onclick = async () => {
   await update(roomRef, {
     gameEnded: true,
   });
+}
+
+if (shuffleBtn) {
+  shuffleBtn.onclick = async () => {
+    if (role !== "host") return;
+
+    try {
+      const data = await fetch("data/questions.json").then(r => r.json());
+      const allThemes = (data.themes || []).filter(t => t?.title);
+
+      const shuffledThemes = shuffle(allThemes);
+      const selected = shuffledThemes.slice(0, 5);
+      const finalThemes = shuffleThemes(selected);
+
+      await update(roomRef, {
+        selectedThemes: finalThemes,
+        usedQuestions: null,
+        currentQuestion: null
+      });
+
+      await loadQuestions();
+
+    } catch (e) {
+      console.error("Ошибка shuffle:", e);
+    }
+  };
 }
 
 document.getElementById("plusBtn").onclick = () => changeScore(1);
