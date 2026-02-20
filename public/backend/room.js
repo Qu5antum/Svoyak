@@ -69,7 +69,7 @@ auth.onAuthStateChanged(async user => {
     statusText.textContent = `Игроков: ${Object.keys(players).length} / 4`;
 
     // кнопка старта только у ведущего и если игроков >= 2
-    startBtn.style.display = (uid === hostId && Object.keys(players).length >= 2) ? "block" : "none";
+    startBtn.style.display = (uid === hostId && Object.keys(players).length >= 1) ? "block" : "none";
 
     // если игра началась
     if (room.status === "started") {
