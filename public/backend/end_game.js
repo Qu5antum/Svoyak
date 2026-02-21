@@ -19,7 +19,6 @@ if (!room?.players) {
     .slice(0, 3);
 
   const places = ["first", "second", "third"];
-  const medals = ["🥇", "🥈", "🥉"];
 
   players.forEach((player, index) => {
     const div = document.createElement("div");
@@ -27,7 +26,7 @@ if (!room?.players) {
     div.style.animationDelay = `${index * 0.15}s`;
 
     div.innerHTML = `
-      <h2>${medals[index]} ${index + 1} место</h2>
+      <h2>${index + 1} место</h2>
       <p>${player.name}</p>
       <span>${player.score} баллов</span>
     `;

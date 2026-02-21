@@ -226,6 +226,7 @@ button {
   align-items: center;
   font-weight: 500;
   transition: 0.2s;
+  font-size: 18px;
 }
 #players li.active {
   background: #22c55e;

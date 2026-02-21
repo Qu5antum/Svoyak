@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("nicknameInput");
   const closeBtn = document.getElementById("closeSidebarBtn");
 
-  console.log("closeBtn:", closeBtn);
-
   if (!playerName) {
     window.location.href = "index.html";
   }

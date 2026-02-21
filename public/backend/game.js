@@ -235,7 +235,7 @@ auth.onAuthStateChanged(async user => {
 
     if (players[hostId]) {
       const li = document.createElement("li");
-      li.textContent = `${players[hostId].name} (ведущий)`;
+      li.textContent = `${players[hostId].name} (Ведущий)`;
       li.style.fontWeight = "bold";
       playersEl.appendChild(li);
     }
@@ -245,7 +245,7 @@ auth.onAuthStateChanged(async user => {
       if (id === hostId) return;
 
       const li = document.createElement("li");
-      li.textContent = `${p.name} — ${p.score ?? 0}`;
+      li.textContent = `${p.name}: ${p.score ?? 0}`;
 
       if (room.answeringPlayer === id) {
         li.style.color = "#22c55e";

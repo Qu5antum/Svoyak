@@ -51,7 +51,7 @@ auth.onAuthStateChanged(async user => {
     // ===== сначала ведущий =====
   if (players[hostId]) {
     const liHost = document.createElement("li");
-    liHost.textContent = `${players[hostId].name} (ведущий)`; // без баллов
+    liHost.textContent = `${players[hostId].name} (Ведущий)`; // без баллов
     liHost.style.fontWeight = "bold";
     playersList.appendChild(liHost);
   }
@@ -60,7 +60,7 @@ auth.onAuthStateChanged(async user => {
   Object.entries(players).forEach(([id, p]) => {
     if (id === hostId) return;
     const li = document.createElement("li");
-    li.textContent = `${p.name || "Игрок"} — ${p.score || 0}`;
+    li.textContent = `${p.name || "Игрок"}: ${p.score || 0}`;
     playersList.appendChild(li);
   });
 
@@ -69,7 +69,7 @@ auth.onAuthStateChanged(async user => {
     statusText.textContent = `Игроков: ${Object.keys(players).length} / 4`;
 
     // кнопка старта только у ведущего и если игроков >= 2
-    startBtn.style.display = (uid === hostId && Object.keys(players).length >= 1) ? "block" : "none";
+    startBtn.style.display = (uid === hostId && Object.keys(players).length >= 2) ? "block" : "none";
 
     // если игра началась
     if (room.status === "started") {
