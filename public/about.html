@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/icon" href="/public/assets/favicon.ico">
+    <link rel="stylesheet" href="style/about.css">
+    <title>About</title>
+</head>
+<body>
+    <div class="aboutContainer">
+        <h2>Об игре SVOYAK</h2>
+
+        <p>
+            SVOYAK - это игра по мотивам телешоу "Своя игра".
+            В игре участвуют три игрока и один ведущий.
+        </p>
+
+        <p>
+            Вы можете создать своё лобби (создатель автоматически становится ведущим)
+            и пригласить игроков по коду. После старта появляются темы и вопросы
+            с номиналом от 100 до 500.
+        </p>
+
+        <p>
+            Игроки выбирают вопросы, а ведущий управляет игрой.
+            За правильные ответы начисляются баллы, за неправильные — снимаются.
+        </p>
+
+        <button id="backBtn" class="backBtn">← Вернуться</button>
+    </div>
+<script>
+    const BackBtn = document.getElementById("backBtn")
+
+    BackBtn.addEventListener("click", () => {
+        window.location.href = "lobby.html";
+    });
+</script>
+</body>
+</html>

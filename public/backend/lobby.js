@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveBtn = document.getElementById("saveNickname");
   const input = document.getElementById("nicknameInput");
   const closeBtn = document.getElementById("closeSidebarBtn");
+  const aboutBtn = document.getElementById("About")
+
+  aboutBtn.addEventListener("click", () => {
+    window.location.href = "about.html";
+  });
 
   if (!playerName) {
     window.location.href = "index.html";
