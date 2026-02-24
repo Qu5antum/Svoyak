@@ -1,225 +1,35 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Orbitron", sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top, #1e293b, #020617);
-  color: white;
-  overflow-x: hidden;
-}
-
+* {margin: 0; padding: 0; box-sizing: border-box}
+body {font-family: "Orbitron", sans-serif;min-height: 100vh;display: flex;justify-content: center;align-items: center;background: radial-gradient(circle at top, #1e293b, #020617);color: white;overflow-x: hidden;}
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from {opacity: 0;transform: translateY(25px);}
+  to {opacity: 1;transform: translateY(0);}
 }
-
-.container {
-  background: linear-gradient(145deg, #0f172a, #1e293b);
-  padding: 40px;
-  border-radius: 18px;
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
-  animation: fadeIn 0.6s ease;
-  box-shadow: 0 0 30px rgba(37, 99, 235, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.loginContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 15px 25px;
-  z-index: 1000;
-}
-
-.buttonAccount {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 8px;
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(255,255,255,0.1);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.buttonAccount:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #2563eb;
-}
-
-.lable {
-  display: flex;
-  align-items: center;
-}
-h2 {
-  margin-bottom: 15px;
-  font-size: 26px;
-}
-
-p {
-  margin-bottom: 25px;
-  color: #c7d2fe;
-}
-
-input {
-  width: 100%;
-  max-width: 300px;
-  padding: 14px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  background: #020617;
-  color: white;
-  outline: none;
-  transition: 0.25s;
-}
-
-input::placeholder {
-  color: #94a3b8;
-  text-align: center;
-}
-
-input:focus {
-  box-shadow: 0 0 15px #3b82f6;
-  transform: scale(1.03);
-}
-
-button {
-  margin-top: 15px;
-  width: 100%;
-  max-width: 240px;
-  padding: 14px;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.25);
-  transform: skewX(-20deg);
-}
-
-button:hover::after {
-  left: 150%;
-  transition: 0.6s;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #2563eb;
-}
-
-button:active {
-  transform: scale(0.97);
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -340px;
-  width: 320px;
-  height: 100%;
-  background: #020617;
-  color: white;
-  transition: 0.3s ease;
-  z-index: 2000;
-  padding: 20px;
-  box-shadow: -10px 0 30px rgba(0,0,0,0.5);
-}
-
-.sidebar.active {
-  right: 0;
-}
-
-.sidebarContent {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-#closeSidebarBtn {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-#closeSidebarBtn svg {
-  fill: white;
-}
-
+.container {background: linear-gradient(145deg, #0f172a, #1e293b);padding: 40px;border-radius: 18px;text-align: center;width: 100%;max-width: 600px;animation: fadeIn 0.6s ease;box-shadow: 0 0 30px rgba(37, 99, 235, 0.25);border: 1px solid rgba(255, 255, 255, 0.05);}
+.loginContainer {position: fixed;top: 0;left: 0;width: 100%;display: flex;justify-content: flex-end;align-items: center;padding: 15px 25px;z-index: 1000;}
+.buttonAccount {display: flex;align-items: center;gap: 8px;padding: 8px 14px;border-radius: 8px;background: rgba(15, 23, 42, 0.8);border: 1px solid rgba(255,255,255,0.1);cursor: pointer;transition: 0.3s;}
+.buttonAccount:hover {transform: scale(1.05);box-shadow: 0 0 15px #2563eb;}
+.lable {display: flex;align-items: center;}
+h2 {margin-bottom: 15px;font-size: 26px;}
+p {margin-bottom: 25px;color: #c7d2fe;}
+input {width: 100%;max-width: 300px;padding: 14px;margin-top: 10px;border-radius: 10px;border: none;font-size: 16px;background: #020617;color: white;outline: none;transition: 0.25s;}
+input::placeholder {color: #94a3b8;text-align: center;}
+input:focus {box-shadow: 0 0 15px #3b82f6;transform: scale(1.03);}
+button {margin-top: 15px;width: 100%;max-width: 240px;padding: 14px;background: linear-gradient(135deg, #2563eb, #3b82f6);border: none;color: white;font-size: 16px;border-radius: 10px;cursor: pointer;transition: 0.3s;position: relative;overflow: hidden;}
+button::after {content: "";position: absolute;top: 0;left: -100%;width: 60%;height: 100%;background: rgba(255, 255, 255, 0.25);transform: skewX(-20deg);}
+button:hover::after {left: 150%;transition: 0.6s;}
+button:hover {transform: scale(1.05);box-shadow: 0 0 20px #2563eb}
+button:active {transform: scale(0.97);}
+.sidebar {position: fixed;top: 0;right: -340px;width: 320px;height: 100%;background: #020617;color: white;transition: 0.3s ease;z-index: 2000;padding: 20px;box-shadow: -10px 0 30px rgba(0,0,0,0.5);}
+.sidebar.active {right: 0;}
+.sidebarContent {display: flex;flex-direction: column;gap: 12px;}
+#closeSidebarBtn {display: flex;align-items: center;gap: 6px;background: none;border: none;color: white;cursor: pointer;margin-bottom: 10px;}
+#closeSidebarBtn svg {fill: white;}
 @media (max-width: 480px) {
-
-  body {
-    padding: 15px;
-  }
-
-  .container {
-    padding: 25px 15px;
-    border-radius: 14px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  input {
-    max-width: 100%;
-    font-size: 15px;
-  }
-
-  button {
-    max-width: none;
-    width: 100%;
-    font-size: 15px;
-  }
-
-  .buttonAccount {
-    transform: scale(0.9);
-  }
-
-  .sidebar {
-    width: 100%;
-  }
+  body {padding: 15px;}
+  .container {padding: 25px 15px;border-radius: 14px;}
+  h2 {font-size: 22px;}
+  p {font-size: 14px;}
+  input {max-width: 100%;font-size: 15px;}
+  button {max-width: none;width: 100%;font-size: 15px;}
+  .buttonAccount {transform: scale(0.9);}.sidebar {  width: 100%;}
 }

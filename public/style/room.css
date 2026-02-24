@@ -1,306 +1,64 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Orbitron', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle at top, #1e293b, #020617);
-  color: white;
-  overflow: hidden;
-  animation: bgPulse 12s infinite alternate;
-}
-
+* {margin: 0;padding: 0;box-sizing: border-box;}
+body {font-family: 'Orbitron', sans-serif;min-height: 100vh;display: flex;justify-content: center;align-items: center;background: radial-gradient(circle at top, #1e293b, #020617);color: white;overflow: hidden;animation: bgPulse 12s infinite alternate;}
 @keyframes bgPulse {
   0% { background-position: top; }
   100% { background-position: bottom; }
 }
-.container {
-  background: linear-gradient(145deg, #0f172a, #1e293b);
-  padding: 40px;
-  border-radius: 18px;
-  text-align: center;
-  width: 600px;
-  height: 700px;
-  max-width: 95%;
-  animation: fadeIn 0.8s ease;
-  box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
+.container {background: linear-gradient(145deg, #0f172a, #1e293b);padding: 40px;border-radius: 18px;text-align: center;width: 600px;height: 700px;max-width: 95%;animation: fadeIn 0.8s ease;box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);display: flex;flex-direction: column;gap: 20px;}
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
-h2 {
-  font-size: 28px;
-  margin-bottom: 5px;
-  letter-spacing: 1px;
-}
-
-p {
-  font-size: 16px;
-  color: #94a3b8;
-}
-
-strong {
-  color: #3b82f6;
-}
-
-ul#playersList {
-  list-style: none;
-  padding: 10px;
-  margin-bottom: 20px;
-  max-height: 280px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-ul#playersList::-webkit-scrollbar {
-  width: 6px;
-}
-
-ul#playersList::-webkit-scrollbar-thumb {
-  background-color: #2563eb;
-  border-radius: 3px;
-}
-
-ul#playersList li {
-  background: #1e293b;
-  padding: 12px 15px;
-  border-radius: 12px;
-  transition: 0.3s;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: default;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  font-size: 18px;
-}
-
-ul#playersList li.active {
-  background: #2563eb;
-  font-weight: bold;
-  color: #fff;
-  transform: scale(1.03);
-  box-shadow: 0 0 15px #2563eb;
-}
-
-ul#playersList li.host {
-  border: 2px solid #3b82f6;
-  font-weight: bold;
-}
-
-#statusText {
-  font-size: 14px;
-  color: #94a3b8;
-}
-
-button {
-  padding: 12px 25px;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-  margin-top: 10px;
-}
-
-button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.25);
-  transform: skewX(-20deg);
-}
-
-button:hover::after {
-  left: 150%;
-  transition: 0.6s;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #2563eb;
-}
-
-button:active {
-  transform: scale(0.97);
-}
-
-#hostPanel {
-  margin-top: 15px;
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
-}
-
+h2 {font-size: 28px;margin-bottom: 5px;letter-spacing: 1px;}
+p {font-size: 16px;color: #94a3b8;}
+strong {color: #3b82f6;}
+ul#playersList {list-style: none;padding: 10px;margin-bottom: 20px;max-height: 280px;overflow-y: auto;display: flex;flex-direction: column;gap: 10px;}
+ul#playersList::-webkit-scrollbar {width: 6px;}
+ul#playersList::-webkit-scrollbar-thumb {background-color: #2563eb;border-radius: 3px;}
+ul#playersList li {background: #1e293b;padding: 12px 15px;border-radius: 12px;transition: 0.3s;display: flex;justify-content: space-between;align-items: center;cursor: default;box-shadow: 0 2px 6px rgba(0,0,0,0.2);font-size: 18px;}
+ul#playersList li.active {background: #2563eb;font-weight: bold;color: #fff;transform: scale(1.03);box-shadow: 0 0 15px #2563eb;}
+ul#playersList li.host {border: 2px solid #3b82f6;font-weight: bold;}
+#statusText {font-size: 14px;color: #94a3b8;}
+button {padding: 12px 25px;background: linear-gradient(135deg, #2563eb, #3b82f6);border: none;color: white;font-size: 16px;border-radius: 10px;cursor: pointer;transition: 0.3s;position: relative;overflow: hidden;margin-top: 10px;}
+button::after {content: "";position: absolute;top: 0;left: -100%;width: 60%;height: 100%;background: rgba(255, 255, 255, 0.25);transform: skewX(-20deg);}
+button:hover::after {left: 150%;transition: 0.6s;}
+button:hover {transform: scale(1.05);box-shadow: 0 0 25px #2563eb;}
+button:active {transform: scale(0.97);}
+#hostPanel {margin-top: 15px;background: #1e293b;padding: 15px;border-radius: 12px;border: 1px solid rgba(255,255,255,0.1);box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);}
 @media (max-width: 480px) {
-  .container {
-    width: 90%;
-    padding: 25px;
-  }
-
+  .container {width: 90%;padding: 25px;}
   h2 { font-size: 22px; }
   button { width: 100%; }
   ul#playersList li { font-size: 14px; padding: 10px; }
   #hostPanel { padding: 10px; }
 }
-
-.popupContainer {
-  justify-content: center;
-}
-
-.popup {
-  --burger-line-width: 1.125em;
-  --burger-line-height: 0.125em;
-  --burger-offset: 0.625em;
-  --burger-bg: #00bf63;
-  --burger-color: #333;
-  --burger-line-border-radius: 0.1875em;
-  --burger-diameter: 3.125em;
-  --burger-btn-border-radius: calc(var(--burger-diameter) / 2);
-  --burger-line-transition: 0.3s;
-  --burger-transition: all 0.1s ease-in-out;
-  --burger-hover-scale: 1.1;
-  --burger-active-scale: 0.95;
-  --burger-enable-outline-color: var(--burger-bg);
-  --burger-enable-outline-width: 0.125em;
-  --burger-enable-outline-offset: var(--burger-enable-outline-width);
-  /* if you want to change sides just switch one property */
-  /* from properties to "unset" and the other to 0 */
-  /* title */
-  --nav-title-size: 0.625em;
-  --nav-title-color: #777;
-  --nav-title-padding-x: 1rem;
-  --nav-title-padding-y: 0.25em;
-  /* underline */
-  --underline-border-width: 0.0625em;
-  --underline-border-color: #ccc;
-  --underline-margin-y: 0.3125em;
-}
-
-/* popup settings 👆 */
-
-.popup {
-  display: inline-block;
-  text-rendering: optimizeLegibility;
-  position: relative;
-}
-
-.popup input {
-  display: none;
-}
-
-.burger {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  background: var(--burger-bg);
-  width: var(--burger-diameter);
-  height: var(--burger-diameter);
-  border-radius: var(--burger-btn-border-radius);
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  transition: var(--burger-transition);
-  outline: var(--burger-enable-outline-width) solid transparent;
-  outline-offset: 0;
-}
-
-.popup-window {
-  transform: scale(var(--nav-default-scale));
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  padding: var(--nav-padding-y) var(--nav-padding-x);
-  background: var(--nav-bg);
-  font-family: var(--nav-font-family);
-  color: var(--nav-text-color);
-  border-radius: var(--nav-border-radius);
-  box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
-  border: var(--nav-border-width) solid var(--nav-border-color);
+.popupContainer {justify-content: center;}
+.popup {--burger-line-width: 1.125em;--burger-line-height: 0.125em;--burger-offset: 0.625em;--burger-bg: #00bf63;--burger-color: #333;--burger-line-border-radius: 0.1875em;--burger-diameter: 3.125em;--burger-btn-border-radius: calc(var(--burger-diameter) / 2);--burger-line-transition: 0.3s;--burger-transition: all 0.1s ease-in-out;--burger-hover-scale: 1.1;--burger-active-scale: 0.95;--burger-enable-outline-color: var(--burger-bg);--burger-enable-outline-width: 0.125em;--burger-enable-outline-offset: var(--burger-enable-outline-width);--nav-title-size: 0.625em;--nav-title-color: #777;--nav-title-padding-x: 1rem;--nav-title-padding-y: 0.25em;--underline-border-width: 0.0625em;--underline-border-color: #ccc;--underline-margin-y: 0.3125em;}
+.popup {display: inline-block;text-rendering: optimizeLegibility;position: relative;}
+.popup input {display: none;}
+.burger {display: flex;position: relative;align-items: center;justify-content: center;background: var(--burger-bg);width: var(--burger-diameter);height: var(--burger-diameter);border-radius: var(--burger-btn-border-radius);border: none;cursor: pointer;overflow: hidden;transition: var(--burger-transition);outline: var(--burger-enable-outline-width) solid transparent;outline-offset: 0;}
+.popup-window {transform: scale(var(--nav-default-scale));visibility: hidden;opacity: 0;position: absolute;padding: var(--nav-padding-y) var(--nav-padding-x);background: var(--nav-bg);font-family: var(--nav-font-family);
+  color: var(--nav-text-color);border-radius: var(--nav-border-radius);box-shadow: var(--nav-shadow-width) var(--nav-shadow-color);
+border: var(--nav-border-width) solid var(--nav-border-color);
   top: calc(
     var(--burger-diameter) + var(--burger-enable-outline-width) +
       var(--burger-enable-outline-offset)
-  );
-  left: var(--nav-position-left);
-  right: var(--nav-position-right);
-  transition: var(--burger-transition);
-  margin-top: 10px;
+  );left: var(--nav-position-left);right: var(--nav-position-right);transition: var(--burger-transition);margin-top: 10px;
 }
-
-.popup-window legend {
-  padding: var(--nav-title-padding-y) var(--nav-title-padding-x);
-  margin: 0;
-  color: var(--nav-title-color);
-  font-size: var(--nav-title-size);
-  text-transform: uppercase;
-}
-
-/* actions */
-
+.popup-window legend {padding: var(--nav-title-padding-y) var(--nav-title-padding-x);margin: 0;color: var(--nav-title-color);font-size: var(--nav-title-size);text-transform: uppercase;}
 .popup-window ul button:hover,
 .popup-window ul button:focus-visible,
 .popup-window ul button:hover svg,
-.popup-window ul button:focus-visible svg {
-  color: var(--nav-button-hover-text-color);
-  background: var(--nav-button-hover-bg);
-}
-
-.burger:hover {
-  transform: scale(var(--burger-hover-scale));
-}
-
-.burger:active {
-  transform: scale(var(--burger-active-scale));
-}
-
-.burger:focus:not(:hover) {
-  outline-color: var(--burger-enable-outline-color);
-  outline-offset: var(--burger-enable-outline-offset);
-}
-
-.popup input:checked + .burger span:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-.popup input:checked + .burger span:nth-child(2) {
-  bottom: 50%;
-  transform: translateY(50%) rotate(-45deg);
-}
-
+.popup-window ul button:focus-visible svg {color: var(--nav-button-hover-text-color);background: var(--nav-button-hover-bg);}
+.burger:hover {transform: scale(var(--burger-hover-scale));}
+.burger:active {transform: scale(var(--burger-active-scale));}
+.burger:focus:not(:hover) {outline-color: var(--burger-enable-outline-color);outline-offset: var(--burger-enable-outline-offset);}
+.popup input:checked + .burger span:nth-child(1) {top: 50%;transform: translateY(-50%) rotate(45deg);}
+.popup input:checked + .burger span:nth-child(2) {bottom: 50%;transform: translateY(50%) rotate(-45deg);}
 .popup input:checked + .burger span:nth-child(3) {
   transform: translateX(
     calc(var(--burger-diameter) * -1 - var(--burger-line-width))
   );
 }
-
-.popup input:checked ~ nav {
-  transform: scale(var(--nav-active-scale));
-  visibility: visible;
-  opacity: 1;
-}
-
+.popup input:checked ~ nav {transform: scale(var(--nav-active-scale));visibility: visible;opacity: 1;}

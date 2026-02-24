@@ -18,13 +18,11 @@ const questionText = document.getElementById("questionText");
 const questionImage = document.getElementById("questionImage");
 const answerBtn = document.getElementById("answerBtn");
 const hostPanel = document.getElementById("hostPanel");
-
 const answerBox = document.getElementById("answerBox");
 const answerText = document.getElementById("answerText");
 const endBtn = document.getElementById("EndBtn");
 const GameEndButton = document.getElementById("gameEndBtn");
 const gameEndWrapper = document.getElementById("GameEndBtn");
-
 const shuffleBtn = document.getElementById("shuffleBtn");
 let lastThemes = null;
 let lastQuestionId = null;
@@ -245,7 +243,7 @@ auth.onAuthStateChanged(async user => {
       if (id === hostId) return;
 
       const li = document.createElement("li");
-      li.textContent = `${p.name}: ${p.score ?? 0}`;
+      li.textContent = `${p.name}: ${p.score ?? 0} баллов`;
 
       if (room.answeringPlayer === id) {
         li.style.color = "#22c55e";

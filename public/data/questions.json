@@ -1661,6 +1661,200 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Битва Эктрасенсов",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "В каком багажнике человек",
+                    "image": "images/sense1.png",
+                    "options": [
+                        "1"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "В каком багажнике человек",
+                    "image": "images/sense3.png",
+                    "options": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "В каком багажнике человек",
+                    "image": "images/sense1.png",
+                    "options": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Минус 1000 баллов",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "В каком багажнике человек",
+                    "image": "images/sense2.png",
+                    "options": [
+                        "1"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Капча",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "На скольких картинах собачки",
+                    "image": "images/capcha4.png",
+                    "options": [
+                        "6"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "На скольких картинах хлеб",
+                    "image": "images/capcha1.png",
+                    "options": [
+                        "6"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "На скольких картинках собачки",
+                    "image": "images/capcha3.png",
+                    "options": [
+                        "6"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "На скольких картинах собачки",
+                    "image": "images/capcha2.png",
+                    "options": [
+                        "8"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "На скольких картинах полотенце",
+                    "image": "images/capcha5.png",
+                    "options": [
+                        "6"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Наша Раша",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Где они жывут",
+                    "image": "images/rasha5.png",
+                    "options": [
+                        "На рублевке"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Сборная какого города",
+                    "image": "images/rasha2.png",
+                    "options": [
+                        "Омская Сборная"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Кто из них Димон и Славик",
+                    "image": "images/rasha1.png",
+                    "options": [
+                        "Слева Славик, справа Димон"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Как его зовут (Имя и Фамилия)",
+                    "image": "images/rasha3.png",
+                    "options": [
+                        "Иван Дулин"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Название канала",
+                    "image": "images/rasha4.png",
+                    "options": [
+                        "Сев-Кав ТВ"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Буква До",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "М",
+                    "options": [
+                        "Л"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "О",
+                    "options": [
+                        "Н"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "И",
+                    "options": [
+                        "З"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "type": "text",
+                    "question": "Ь",
+                    "options": [
+                        "Ы"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Ъ",
+                    "options": [
+                        "Щ"
+                    ]
+                }
+            ]
         }
     ]
 }

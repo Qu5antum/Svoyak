@@ -60,7 +60,7 @@ auth.onAuthStateChanged(async user => {
   Object.entries(players).forEach(([id, p]) => {
     if (id === hostId) return;
     const li = document.createElement("li");
-    li.textContent = `${p.name || "Игрок"}: ${p.score || 0}`;
+    li.textContent = `${p.name || "Игрок"}: ${p.score || 0} баллов`;
     playersList.appendChild(li);
   });
 
