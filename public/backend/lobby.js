@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const room = snapshot.val();
       const playersCount = room.players ? Object.keys(room.players).length : 0;
 
-      if (playersCount >= 4) {
+      if (playersCount >= 10) {
         alert("Комната заполнена");
         return;
       }

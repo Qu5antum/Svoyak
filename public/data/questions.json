@@ -1855,6 +1855,2541 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Отель или Тюрьма",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Отель или Тюрьма",
+                    "image": "images/otel_ili_turma1.png",
+                    "options": [
+                        "Это тюрьма"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Отель или Тюрьма",
+                    "image": "images/otel_ili_turma2.png",
+                    "options": [
+                        "Это отель"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Отель или Тюрьма",
+                    "image": "images/otel_ili_turma3.png",
+                    "options": [
+                        "Это тюрьма"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Отель или Тюрьма",
+                    "image": "images/otel_ili_turma4.png",
+                    "options": [
+                        "Это тюрьма"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Отель или Тюрьма",
+                    "image": "images/otel_ili_turma5.png",
+                    "options": [
+                        "Это тюрьма"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Чёт напомнило",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Что тебе это напоминает",
+                    "image": "images/chet_napominaet1.png",
+                    "options": [
+                        "Рафаэль (Черепашки Ниндзя)"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Что тебе это напоминает",
+                    "image": "images/chet_napominaet5.png",
+                    "options": [
+                        "Грут"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Что тебе это напоминает",
+                    "image": "images/chet_napominaet4.png",
+                    "options": [
+                        "Коржик (Cookie Monster)"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Что тебе это напоминает",
+                    "image": "images/chet_napominaet3.png",
+                    "options": [
+                        "ET (Инопланитянин)"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Что тебе это напоминает",
+                    "image": "images/chet_napominaet2.png",
+                    "options": [
+                        "Штурмовик"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Вы Трое",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Какая часть Гарри Потера",
+                    "image": "images/vi_troe4.png",
+                    "options": [
+                        "Гарри Поттер и философский камень"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Какая часть Гарри Потера",
+                    "image": "images/vi_troe5.png",
+                    "options": [
+                        "Гарри Поттер и узник Азкабана"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Какая часть Гарри Потера",
+                    "image": "images/vi_troe3.png",
+                    "options": [
+                        "Гарри Поттер и Принц-полукровка"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Какая часть Гарри Потера",
+                    "image": "images/vi_troe2.png",
+                    "options": [
+                        "Гарри Поттер и Орден Феникса"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Какая часть Гарри Потера",
+                    "image": "images/vi_troe1.png",
+                    "options": [
+                        "Гарри Поттер и Кубок огня"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Батончики",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите батончик",
+                    "image": "images/batonchik2.png",
+                    "options": [
+                        "Twix"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите батончик",
+                    "image": "images/batonchik1.png",
+                    "options": [
+                        "Toblerone"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите батончик",
+                    "image": "images/batonchik5.png",
+                    "options": [
+                        "Snickers"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите батончик",
+                    "image": "images/batonchik4.png",
+                    "options": [
+                        "Kit Kat"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите батончик",
+                    "image": "images/batonchik3.png",
+                    "options": [
+                        "Picnic"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Прозвища",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "Мужчина, который родился недоношенным получил это итальянское прозвище из двух слов",
+                    "options": [
+                        "Аль Денте"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Пацан, убегая от сторожа, потерял кроссовок, с помощью которого сторож позже пыталься установить владельца. Пацан получил это сказачное прозвище",
+                    "options": [
+                        "Золушка"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "Посититель ресторана, который постоянно заказывал жюльен, получил прозвище в честь этого русского писателя и дипломата",
+                    "options": [
+                        "Грибоедов"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "Мужик который в деревне колол свинью и случайно задел ножом собственный живот, получил прозвище в честь этого представителя сословия одной азиатской страны",
+                    "options": [
+                        "Самурай"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "МОДИФИКАТОР! Плюс на минус",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Мистика",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "Согласно опросу, самым популярным представителем Шотландии является это ЧУДОВИЩЕ",
+                    "options": [
+                        "Лох-несское чудовище"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "В 2021 году ученный Йохан Гауме во время просмотра 'Холодного Сердца' понял, как раскрыть тайну известного жуткого ПРОШЕСТВИЯ 1959 года. Для проверки своей гипотезы Йохан запросил программу, которую аниматоры использовали для снежного потока, летящего на персонажей",
+                    "options": [
+                        "Перевал Дятлова"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "В домах С НИМИ ученные зафиксировали высокие уровни монооксида углерода или иных ядовитых веществ, вызывающих галюцинации. Это объясняет, почему местами ИХ чаще всего встречают в старых постройках с неисправной бытовой техники",
+                    "options": [
+                        "Приведения"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "Исследовательница паранормальных явлений Фиона Брум, назвала этот ЭФФЕКТ по фамилии политика которого многие ошибачно считали умершим в 1980-х годах. Ученая утверждает, что ОН проявляется в результате перемещения людей в альтернативную реальность",
+                    "options": [
+                        "Эффект Манделы"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Графина Элизавета Батори убивала девушек, чтобы принимать 'омолаживающие' ванны из их крови. Подобные ритуалы проводились много раз, поэтому информацию о зверствах Батори среди прочего можно найти и в этой КНИГЕ",
+                    "options": [
+                        "Книга рекордов Гинесса"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Актеры в играх",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите актера",
+                    "image": "images/actori_v_igrah5.png",
+                    "options": [
+                        "Кевин Спейси"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите актера",
+                    "image": "images/actori_v_igrah1.png",
+                    "options": [
+                        "Киану Ривз"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите актера",
+                    "image": "images/actori_v_igrah4.png",
+                    "options": [
+                        "Рами Малек"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите актера",
+                    "image": "images/actori_v_igrah3.png",
+                    "options": [
+                        "Уиллем Дефо"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите актера",
+                    "image": "images/actori_v_igrah2.png",
+                    "options": [
+                        "Жан Рено"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Фрики",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите фрика",
+                    "image": "images/friki2.png",
+                    "options": [
+                        "Олег Монгол"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите фрика",
+                    "image": "images/friki1.png",
+                    "options": [
+                        "Генадий Горин"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите фрика",
+                    "image": "images/friki4.png",
+                    "options": [
+                        "Руки Базуки"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите фрика",
+                    "image": "images/friki5.png",
+                    "options": [
+                        "Руслан Гительман"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите фрика",
+                    "image": "images/friki3.png",
+                    "options": [
+                        "Зипуля"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "На колесях",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Сколько колес",
+                    "image": "images/na_kolesah5.png",
+                    "options": [
+                        "0, это гусинецы"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Сколько колес",
+                    "image": "images/na_kolesah3.png",
+                    "options": [
+                        "2"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Сколько колес",
+                    "image": "images/na_kolesah1.png",
+                    "options": [
+                        "4"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Сколько колес",
+                    "image": "images/na_kolesah2.png",
+                    "options": [
+                        "4"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Сколько колес",
+                    "image": "images/na_kolesah4.png",
+                    "options": [
+                        "6"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Яблочная",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "По легенде, после падения яблока на голову именно ЕМУ пришел в ту же голову закон всемирного тяготения",
+                    "options": [
+                        "Исаак Ньютон"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Один из способов определить: жив ли человек или нет, надавить на НЕГО, Если жив, то ОНО примет исходную форму",
+                    "options": [
+                        "Глазное яблоко"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "Кадык еще называют ЕГО яблоком, ведь по легенде яблоко застряло у НЕГО в горле незадолго до изгнания",
+                    "options": [
+                        "Адам"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "Одна из самых известных ЕГО цитат: 'Работать нужно не 12 часов, а головой'",
+                    "options": [
+                        "Стив Джобс"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Минус 1000 баллов",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Наш Голливуд",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите фильмы из картинки",
+                    "image": "images/nash_golivud3.png",
+                    "options": [
+                        "Властелин Колец и Бумер"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите фильмы из картинки",
+                    "image": "images/nash_golivud2.png",
+                    "options": [
+                        "Операция 'Ы' и другие приключения Шурика и 'Карты, Деньги, Два Ствола'"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите фильмы из картинки",
+                    "image": "images/nash_golivud1.png",
+                    "options": [
+                        "Джентельмены удачи и Приведение"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите фильмы из картинки",
+                    "image": "images/nash_golivud4.png",
+                    "options": [
+                        "Морозко и Терминатор"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите фильмы из картинки",
+                    "image": "images/nash_golivud5.png",
+                    "options": [
+                        "Кавказкая пленица и Убить Билла"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Фруктомбуры",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/fruktomburi2.png",
+                    "options": [
+                        "Яблоконь"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/fruktomburi3.png",
+                    "options": [
+                        "Виноградио"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/fruktomburi4.png",
+                    "options": [
+                        "Барабанан"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/fruktomburi5.png",
+                    "options": [
+                        "Лимонах"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/fruktomburi1.png",
+                    "options": [
+                        "Рэперсик"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Расклад Такой",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Во что этот предмет раскладывается",
+                    "image": "images/rasklad_takoi4.png",
+                    "options": [
+                        "Беговая Дорожка"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Во что этот предмет раскладывается",
+                    "image": "images/rasklad_takoi2.png",
+                    "options": [
+                        "Лопата"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Во что этот предмет раскладывается",
+                    "image": "images/rasklad_takoi1.png",
+                    "options": [
+                        "Стакан"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Во что этот предмет раскладывается",
+                    "image": "images/rasklad_takoi3.png",
+                    "options": [
+                        "Ванная"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Можешь отвечать приблизительно до конца игры",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Магшот или Фото",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Магшот или фото",
+                    "image": "images/magshot_ili_foto5.png",
+                    "options": [
+                        "Магшот"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Магшот или фото",
+                    "image": "images/magshot_ili_foto2.png",
+                    "options": [
+                        "Магшот"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Магшот или фото",
+                    "image": "images/magshot_ili_foto1.png",
+                    "options": [
+                        "Фото"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Магшот или фото",
+                    "image": "images/magshot_ili_foto4.png",
+                    "options": [
+                        "Магшот"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Магшот или фото",
+                    "image": "images/magshot_ili_foto3.png",
+                    "options": [
+                        "Фото"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Чей костюмчик",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Чей это костюм",
+                    "image": "images/chey_kostumchik5.png",
+                    "options": [
+                        "Шрек"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Чей это костюм",
+                    "image": "images/chey_kostumchik4.png",
+                    "options": [
+                        "Беатрикс Киддо, Убить Билла"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Чей это костюм",
+                    "image": "images/chey_kostumchik1.png",
+                    "options": [
+                        "Зеро Мустафа (Отель Гранд Будапешт)"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Чей это костюм",
+                    "image": "images/chey_kostumchik3.png",
+                    "options": [
+                        "Большой Лебовски"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Чей это костюм",
+                    "image": "images/chey_kostumchik2.png",
+                    "options": [
+                        "Свидетель из Фрязино"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Сон",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "Чтобы не утонуть, дельфины никогда не засыпают польностью. Сначала спит одно ОНО, потом ДРУГОЕ, при этом один глаз всегда отстается открытым",
+                    "options": [
+                        "Полушарие мозга"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Двоих из них зовут Филлип и Степан, а имена двух других имеют нечеловечиское происхождение. Где их можно увидеть?",
+                    "options": [
+                        "Спокойной ночи, малыши"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "Во время показа ЭТОГО ФИЛЬМА один японский телеканал решил помочь зрителям и разместил текст в углу экрана с подсказкой, на каком уровне сна герои находятся сейчас",
+                    "options": [
+                        "Начало"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "В симфонии по прозвищу 'Сюрприз' композитор Гайдн во время постепенно затихающей музыки вставил максимально громкий удар литвар. Зачем?",
+                    "options": [
+                        "Чтобы задремавшие зрители проснулись"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Плюс 1000 баллов",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Ракетки",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Плюс 500 баллов",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Для чего это ракетка",
+                    "image": "images/raketki4.png",
+                    "options": [
+                        "Настольный тенис (Пинг-Понг)"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Для чего это ракетка",
+                    "image": "images/raketki3.png",
+                    "options": [
+                        "Бадминтон"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Для чего это ракетка",
+                    "image": "images/raketki2.png",
+                    "options": [
+                        "Падел"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Для чего это ракетка",
+                    "image": "images/raketki1.png",
+                    "options": [
+                        "Сквош"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "И Мой Меч",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Чей это меч",
+                    "image": "images/moi_mech5.png",
+                    "options": [
+                        "Дарт Вейдер"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Чей это меч",
+                    "image": "images/moi_mech2.png",
+                    "options": [
+                        "Леонардо"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Чей это меч",
+                    "image": "images/moi_mech1.png",
+                    "options": [
+                        "Арья Старк"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Чей это меч",
+                    "image": "images/moi_mech4.png",
+                    "options": [
+                        "Ведьмак"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Чей это меч",
+                    "image": "images/moi_mech3.png",
+                    "options": [
+                        "Максимус"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Похоже",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Сделай похожее лицо",
+                    "image": "images/pohozheye5.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Сделай похожее лицо",
+                    "image": "images/pohozheye4.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Сделай похожее лицо",
+                    "image": "images/pohozheye3.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Сделай похожее лицо",
+                    "image": "images/pohozheye2.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Сделай похожее лицо",
+                    "image": "images/pohozheye1.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Качалка",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/kachalka2.png",
+                    "options": [
+                        "Протеин (Gold Standart)"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Куда нужно колоть тренболон для самого лучшего эффекта?",
+                    "options": [
+                        "В очко"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "В качалке он тоже есть",
+                    "image": "images/kachalka3.png",
+                    "options": [
+                        "Гриф"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Как называется упражнение",
+                    "image": "images/kachalka1.png",
+                    "options": [
+                        "Кегеля"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Какой спортивный инвентарь на уроке физкультуры издает характерный свистящий звук при быстром вращении?",
+                    "options": [
+                        "Скакалка"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Туалетная",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Эта муха в писсуаре - нарисованная. Для чего она нужна?",
+                    "image": "images/tualetnaya2.png",
+                    "options": [
+                        "Видимая цель заставляет мужчин инстиктивно стремиться сбить муху, поэтому они совершают меньше промахов"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "В туалетах немецких баров устанавливают необычные раковины с ручками. Для чего они предназначены",
+                    "image": "images/tualetnaya1.png",
+                    "options": [
+                        "Для тошноты перепивших - удобно держаться и не падать"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "В Японии человечиские фекали использовались в качестве удобрений. Причем фекали богача ценились дороже, чем бедняка. почему?",
+                    "options": [
+                        "Рацион богача был насыщенее и разнобразнее, а потому и полезнее для растений"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Плюс на Минус",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "На королевских свадьбах Великобритании на сувенирах размещают первые быквы имен жениха и невесты, причем по традиции имя жениха должно стоять первым. Почему во время свадьбы Уильяма и Кейт Миддлтон эту традицию пришлось нарушить?",
+                    "options": [
+                        "Чтобы не получилось WC (William и Catherine) - обозначает туалет"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "На самом деле",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "На самом деле, ЭТО БЛЮДО не имеет никакого отношения к паслёновым или никотину. Название происходит от слова 'тапа' - грузинской сковороды",
+                    "options": [
+                        "Цыпленока табака"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "На самом деле, ДЕЛАТЬ ЭТО - довольно неэффективно, поскольку концентрация, отравляющего вещества в крови уменьшается всего на 2%. Вдобавок, можно и самому пострадать, если во рту есть ранки",
+                    "options": [
+                        "Отсасывать яд змеи"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "На самом деле, ЭТО ДВУХКОРЕННОЕ СЛОВО имеет отношения к большому скоплению людей. Оно используется в библейском сюжете о строительстве Вавилонской башни, то есть, сотворению столбца",
+                    "options": [
+                        "Столпотворение"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "На самом деле, ОНИ не очень любят ЕГО, и если предложить выбор, то выберают зерно. Просто в средние века следы зубов на НЕМ были гораздо более заметны, чем исчезновение несколько зернышек",
+                    "options": [
+                        "Мыши, сыр"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "На самом деле, ДЕЛАТЬ ЭТО можно. Миф появился из за опасения, что вода приведет к вымыванию аллергена, но это возможно. А вот тереть мочалкой или заклеивать пластырем действительно притовопоказано",
+                    "options": [
+                        "Мочить Манту"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Мемология",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите мем по рисунку",
+                    "image": "images/memologiya5.png",
+                    "options": [
+                        "Six-Seven"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите мем по рисунку",
+                    "image": "images/memologiya4.png",
+                    "options": [
+                        "Скибиди Туалет"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите мем по рисунку",
+                    "image": "images/memologiya3.png",
+                    "options": [
+                        "Это фиаско братан"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите мем по рисунку",
+                    "image": "images/memologiya2.png",
+                    "options": [
+                        "Это рэпчик"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите мем по 3 вещам",
+                    "image": "images/memologiya1.png",
+                    "options": [
+                        "Ты на пенек сел - должен был косарь отдать!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Секс с Анфисой Ч",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Что скрыто за черным квадратиком",
+                    "image": "images/seks_c_ch5.png",
+                    "options": [
+                        "Секс-гигантом"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Что скрыто за черным квадратиком",
+                    "image": "images/seks_c_ch4.png",
+                    "options": [
+                        "Сексом"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Что скрыто за черным квадратиком",
+                    "image": "images/seks_c_ch3.png",
+                    "options": [
+                        "Спермы"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Что скрыто за черным квадратиком",
+                    "image": "images/seks_c_ch2.png",
+                    "options": [
+                        "Гениталиями"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Что скрыто за черным квадратиком",
+                    "image": "images/seks_c_ch1.png",
+                    "options": [
+                        "Дынями"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Живая Еда",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите блюдо",
+                    "image": "images/zhivaya_eda5.png",
+                    "options": [
+                        "Ленивые голубцы"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите блюдо",
+                    "image": "images/zhivaya_eda4.png",
+                    "options": [
+                        "Докторская колбаса"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите блюдо",
+                    "image": "images/zhivaya_eda1.png",
+                    "options": [
+                        "Мясо по франзуски"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите блюдо",
+                    "image": "images/zhivaya_eda3.png",
+                    "options": [
+                        "Цезарь с Курицей"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите блюдо",
+                    "image": "images/zhivaya_eda2.png",
+                    "options": [
+                        "Гречка по-купечески"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Что было раньше",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Что изобрели раньше",
+                    "image": "images/chto_izobreli5.png",
+                    "options": [
+                        "Интернет"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Что изобрели раньше",
+                    "image": "images/chto_izobreli4.png",
+                    "options": [
+                        "Микрофон"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Что изобрели раньше",
+                    "image": "images/chto_izobreli3.png",
+                    "options": [
+                        "Зажигалка"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Что изобрели раньше",
+                    "image": "images/chto_izobreli2.png",
+                    "options": [
+                        "Контактные линзы"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Что изобрели раньше",
+                    "image": "images/chto_izobreli1.png",
+                    "options": [
+                        "Искусственное сердце"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Школа",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "О персонаже игры 'Ведьмак 3' который принадлежит к видьмачьей школе кота, неизвестно, остался ли он жив или умер. Как зовут этого персонажа?",
+                    "options": [
+                        "Шрёдингер"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Декстар Холланд и Грег Крисел основали группу The Offspring, когда учились в школе. На роль гитариста они пригласили парня, который был старше их на 3 года. Отчасти потому, что у него был опыт игры в рок-группе, но главная причина - он мог ДЕЛАТЬ ЭТО совершенно законно",
+                    "options": [
+                        "Покупать алкоголь"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "У эфиопского олимпийского чемпиона была необычная манера бега: он прижимал левую руку к телу и немного изгибал ее. Объясняя это, чемпион рассказал, что детстве бегал по 10 км до школы и обратно, держа в левой руке ИХ.",
+                    "options": [
+                        "Учебники"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Однажды в школах Нью-Йорка запустили кампанию против наркотиков. Для этого на карандашах разместили надпись 'слишком крут чтобы употреблять'. Почему она провалилась?",
+                    "image": "images/shkola1.png",
+                    "options": [
+                        "Карандаши со временем стачивались, и в какой то момент оставались только фраза 'do drugs' (употребляй), а потом просто drugs. НУ ТУПЫЕ"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Секретная школа 'Школа семи колокольчиков' получила свое название благодоря экзамену, во время которого не один колокольчик на одетом манекене не должен зазвенеть. Кого обучают в этой школе?",
+                    "options": [
+                        "Воров карманников"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Носи усы",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Как называется фильм",
+                    "image": "images/nosi_usi4.png",
+                    "options": [
+                        "Богемская рапсодия"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Минус 1000 баллов",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Как называется фильм",
+                    "image": "images/nosi_usi3.png",
+                    "options": [
+                        "Борат"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Как называется фильм",
+                    "image": "images/nosi_usi2.png",
+                    "options": [
+                        "Утомленные солнцем"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Как называется фильм",
+                    "image": "images/nosi_usi1.png",
+                    "options": [
+                        "1+1"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Виды Колбасы",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите вид колбасы",
+                    "image": "images/vidi_kolbasi4.png",
+                    "options": [
+                        "Прошутто"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите вид колбасы",
+                    "image": "images/vidi_kolbasi3.png",
+                    "options": [
+                        "Буженина"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите вид колбасы",
+                    "image": "images/vidi_kolbasi1.png",
+                    "options": [
+                        "Бастурма"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Плюс на Минус",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите вид колбасы",
+                    "image": "images/vidi_kolbasi2.png",
+                    "options": [
+                        "Чоризо"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Авто по фарам",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите марку авто по фарам",
+                    "image": "images/avto_po_pharam5.png",
+                    "options": [
+                        "Cadilac"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите марку авто по фарам",
+                    "image": "images/avto_po_pharam4.png",
+                    "options": [
+                        "Bentley"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите марку авто по фарам",
+                    "image": "images/avto_po_pharam1.png",
+                    "options": [
+                        "BMV"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите марку авто по фарам",
+                    "image": "images/avto_po_pharam2.png",
+                    "options": [
+                        "Mercedez-Benz"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите марку авто по фарам",
+                    "image": "images/avto_po_pharam3.png",
+                    "options": [
+                        "Subaru"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Рандомные вопросы",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "Из какого материала был сделан стойкий солдатик",
+                    "options": [
+                        "Олово"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "На каком кинофестивале вручают 'Золотую пальмову ветвь'",
+                    "options": [
+                        "Канский кинофестиваль",
+                        "Канны"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Какой фрукт вы видите на фотографии?",
+                    "image": "images/random_voprosi1.png",
+                    "options": [
+                        "Гуава"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "Расшифруйте миниум две аббревиатуры НПД, УСН, ПСН, ОКВЭД",
+                    "options": [
+                        "Налог на профессиональный доход",
+                        "Упрощенная система налогооблажения",
+                        "Патентная система налогооблажения",
+                        "Общероссийский классификатор видов экономической деятельности"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Согласно итальянской шутке, актрисам тяжелее всего приходится в балете, поскольку им приходится все время ДЕЛАТЬ ЭТО. Делать что?",
+                    "options": [
+                        "Молчать"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Такие разные зомби",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Откуда зомби",
+                    "image": "images/takiye_zombi5.png",
+                    "options": [
+                        "Plants vs Zombies"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Откуда зомби",
+                    "image": "images/takiye_zombi4.png",
+                    "options": [
+                        "Last of us"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Откуда зомби",
+                    "image": "images/takiye_zombi1.png",
+                    "options": [
+                        "Зомби по имени Шон"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Откуда зомби",
+                    "image": "images/takiye_zombi3.png",
+                    "options": [
+                        "Ходячие мертвецы"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Откуда зомби",
+                    "image": "images/takiye_zombi2.png",
+                    "options": [
+                        "Resident Evil 2"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Х...вые синонимы",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "Он установил мировой рекорд в беге на 100 метров - 9,58 секунд",
+                    "options": [
+                        "Усэйн Болт"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Ученные выяснили, что содержание сахара в НЁМ выше, чем в его сопернице в известной поговорке",
+                    "options": [
+                        "Хрен (все таки слаще)"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назови синоним",
+                    "image": "images/hrenov_sinonim1.png",
+                    "options": [
+                        "Волына (волынка, но побольше)"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "ЭТА БУКВА в старославянской азбуке выглядила как крест. Поэтому глагол, которые ОТ НЕЁ происходит, означал 'зачеркнуть'. Позже значение расширилось до 'до потерять уничтожить'",
+                    "options": [
+                        "Хер (глагол - похерить)"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Так называется ПЛОД дерева, чьё латинское название - Pinus",
+                    "options": [
+                        "Шишка"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Продай мне",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Продай эту вещь (Рюкзак для багета)",
+                    "image": "images/prodai_mne4.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Продай эту вещь (Трусы для рук)",
+                    "image": "images/prodai_mne5.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Продай эту вещь",
+                    "image": "images/prodai_mne1.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Продай эту вещь (Штаны-стол для пикьника)",
+                    "image": "images/prodai_mne3.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Продай эту вещь",
+                    "image": "images/prodai_mne2.png",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Мультфильмы по головному убору",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите мультфильм по головному убору",
+                    "image": "images/mult_po_golovnomy5.png",
+                    "options": [
+                        "Маша и Медведь"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите мультфильм по головному убору",
+                    "image": "images/mult_po_golovnomy4.png",
+                    "options": [
+                        "Незнайка на Луне"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите мультфильм по головному убору",
+                    "image": "images/mult_po_golovnomy3.png",
+                    "options": [
+                        "История игрушек"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите мультфильм по головному убору",
+                    "image": "images/mult_po_golovnomy2.png",
+                    "options": [
+                        "Кот в сапогах"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите мультфильм по головному убору",
+                    "image": "images/mult_po_golovnomy1.png",
+                    "options": [
+                        "Три богатыря, Алеша Попович"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Щя найду",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "Фильм, где мужик отвечал на звонки и разбогател",
+                    "options": [
+                        "Волк с Уолл-Стрит"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Фильм, где мужик растет обрантно",
+                    "options": [
+                        "Загадочная история Бенджамина Баттона"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Получи 2000 баллов но обоснуй почему тебе нужны эти баллы",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "Фильм, где мужик застрял между шкафами",
+                    "options": [
+                        "Интерстеллар"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Фильм, где мальчик научил Элвиса танцевать",
+                    "options": [
+                        "Форрест Гамп"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Momento Море",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Убьет ли тебя это",
+                    "image": "images/momento_more5.png",
+                    "options": [
+                        "Да. Фугу(яд в 1000 раз токсичнее цианида)"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Убьет ли тебя это",
+                    "image": "images/momento_more4.png",
+                    "options": [
+                        "Нет. Минога(может сделать кусь, но быстро умереть от этого крайне маловероятно)"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Убьет ли тебя это",
+                    "image": "images/momento_more1.png",
+                    "options": [
+                        "Да. Синекольчатый осьминог (противоядие до сих пор не найдено)"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Убьет ли тебя это",
+                    "image": "images/momento_more3.png",
+                    "options": [
+                        "Нет, Китовая акула (не представляет угрозы для людей)"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Убьет ли тебя это",
+                    "image": "images/momento_more2.png",
+                    "options": [
+                        "Да. Кубомедуза (яд в 100 раз токсичнее яды кобры)"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Спецмашины",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Как называется данная техника",
+                    "image": "images/spec_mashini4.png",
+                    "options": [
+                        "Монстр-Трак"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Как называется данная техника",
+                    "image": "images/spec_mashini2.png",
+                    "options": [
+                        "Гольф кар"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Как называется данная техника",
+                    "image": "images/spec_mashini1.png",
+                    "options": [
+                        "Папамобиль"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Как называется данная техника",
+                    "image": "images/spec_mashini3.png",
+                    "options": [
+                        "Трицикл"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Дели умножай свои баллы на 0.5",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "ЕПЭПЮ",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите ютуб канал по превью",
+                    "image": "images/epepu4.png",
+                    "options": [
+                        "Mr Beast"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите ютуб канал по превью",
+                    "image": "images/epepu3.png",
+                    "options": [
+                        "Дима Масленников"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Плюс на Минус",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите ютуб канал по превью",
+                    "image": "images/epepu2.png",
+                    "options": [
+                        "BadComedian"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите ютуб канал по превью",
+                    "image": "images/epepu1.png",
+                    "options": [
+                        "Сыендук"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Даты",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Какая компания основанна",
+                    "image": "images/dati5.png",
+                    "options": [
+                        "Microsoft"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Первый фильм какой саги",
+                    "image": "images/dati4.png",
+                    "options": [
+                        "Звездные войны"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Первая книга какой ввселенной",
+                    "image": "images/dati1.png",
+                    "options": [
+                        "Гарри Поттер"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Какая катастрофа",
+                    "image": "images/dati3.png",
+                    "options": [
+                        "Титаник"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Какая игра вышла в свет",
+                    "image": "images/dati2.png",
+                    "options": [
+                        "Тетрис"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "SOS",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "Выражение, которое используется в значении 'мучить кого либо, издеваться'. Спасибо комарам за эту фразу",
+                    "options": [
+                        "Сосать кровь"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Фразеологизм, означающий неприятное, ноющее, тянущее, ощущение пустоты, в верхней части живота, возникающее обычно при сильном голоде, тревоге, страхе или волнении",
+                    "options": [
+                        "Сосет под ложечкой"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "Какую фразу произнес Плющенко в знаменитой рекламе Чупа-Чупса",
+                    "options": [
+                        "Что сосуи чемпионы"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "Фраза основана на мифе связанном с медведями, На самом деле зимой у медведей сходит старая кожа на подушечках лап, и они облизывают их, чтобы облегчить зуд",
+                    "options": [
+                        "Сосать лапу"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Исконно русское выражение. Связано с нервозной привычки грызть ногти в раздумье. Так же, как и 'Притянуто за уши' означает информацию, использованную без достаточных на то оснований",
+                    "options": [
+                        "Высосать из пальца"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Какова твоя профессия",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите профессию",
+                    "image": "images/tvoya_professia5.png",
+                    "options": [
+                        "Тренер"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите профессию",
+                    "image": "images/tvoya_professia4.png",
+                    "options": [
+                        "Таксист"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите профессию",
+                    "image": "images/tvoya_professia1.png",
+                    "options": [
+                        "Доктор"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите профессию",
+                    "image": "images/tvoya_professia3.png",
+                    "options": [
+                        "Адвокат"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите профессию",
+                    "image": "images/tvoya_professia2.png",
+                    "options": [
+                        "Детектив"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Тачки из фильмов",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите фильм по летающему автомобилю",
+                    "image": "images/tachki_iz_filmov5.png",
+                    "options": [
+                        "Гарри Поттер"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите фильм-постапокалипсис по автомобилю",
+                    "image": "images/tachki_iz_filmov4.png",
+                    "options": [
+                        "Безумный Макс"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите фильм с Джимом Кери по автомобилю",
+                    "image": "images/tachki_iz_filmov3.png",
+                    "options": [
+                        "Тупой и еще тупее"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назавите фильм с Леонардо Дикаприо по автомобилю",
+                    "image": "images/tachki_iz_filmov2.png",
+                    "options": [
+                        "Волк с Уолл-Стрит"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите фильм с Уиллом Смитом по автомобилю",
+                    "image": "images/tachki_iz_filmov1.png",
+                    "options": [
+                        "Я робот"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Я Дизайнер",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Что здесь написанно",
+                    "image": "images/ya_dizayner5.png",
+                    "options": [
+                        "Перевод документов"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Что здесь написанно",
+                    "image": "images/ya_dizayner4.png",
+                    "options": [
+                        "Приатного аппетита"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Что здесь написанно",
+                    "image": "images/ya_dizayner3.png",
+                    "options": [
+                        "кофе с булочкой"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Что здесь написанно",
+                    "image": "images/ya_dizayner2.png",
+                    "options": [
+                        "строит"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Что здесь написанно",
+                    "image": "images/ya_dizayner1.png",
+                    "options": [
+                        "Распродажа платьев"  
+                    ]
+                }
+            ]
+        },
+                {
+            "title": "Шлакоблокунь 2",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/shlaka5.png",
+                    "options": [
+                        "Огурысь"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/shlaka3.png",
+                    "options": [
+                        "Бэмбита"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/shlaka2.png",
+                    "options": [
+                        "Суморж"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Что за слово",
+                    "image": "images/shlaka1.png",
+                    "options": [
+                        "Ружьёж"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Что это",
+                    "image": "images/shlaka4.png",
+                    "options": [
+                        "Диплодоктор"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Съедобное - Несъедобное",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Съедобное - Несъедобное",
+                    "image": "images/syiedob5.png",
+                    "options": [
+                        "Съедобное (Гуйлингао - десерт из панцыря черепахи)"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Съедобное - Несъедобное",
+                    "image": "images/syiedob4.png",
+                    "options": [
+                        "Съедобное (Куй асада в Южной Америке готовят морских свинок)"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Съедобное - Несъедобное",
+                    "image": "images/syiedob1.png",
+                    "options": [
+                        "Несъедобное (когти орла)"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Съедобное - Несъедобное",
+                    "image": "images/syiedob3.png",
+                    "options": [
+                        "Съедобное (японские крекеры с отваренными осами)"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Съедобное - Несъедобное",
+                    "image": "images/syiedob2.png",
+                    "options": [
+                        "Съедобное (суп из птичьих гнезд)"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Причесон",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "По легенде, известный ученный после рождения первого ребенка решил экономить на парихмахере, а потом это стало стилем. Популяризатор науки Бен Орлин назвал его прическу 'взрыв сверхновой'. Этим ученным был",
+                    "options": [
+                        "Альберт Эйнштейн"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "Некоторые историки предполагают, что Цезарь носил ЕГО не из-за тщеславия, а чтобы скрыть свою лысину",
+                    "options": [
+                        "Венок"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "В одном из интервью Мэтт Гроунинг сказал, что изначально планировал спрятать за ЕЁ прической длинные заячьи уши",
+                    "options": [
+                        "Мардж Симпсон"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "В этой стране действует запрет на прически, признанные 'капиталестическими', а так же окрашивание волос, завивка и укладки, имитирующие K-pop звездч",
+                    "options": [
+                        "Северная Корея"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Американцы говорят об этой прическе так: 'It's all buisness in the front, and all party in the back' (бизнес спереди, вечеринке сзади). А значительную роль в популяризации такой стрижки сыграл Дэвид Боуи",
+                    "options": [
+                        "Маллет"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "По обуви",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назови фильм по обуви",
+                    "image": "images/film_po_obuvi4.png",
+                    "options": [
+                        "Форрест Гамп"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назови фильм по обуви",
+                    "image": "images/film_po_obuvi3.png",
+                    "options": [
+                        "Убить Билла"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назови фильм по обуви",
+                    "image": "images/film_po_obuvi2.png",
+                    "options": [
+                        "Иван Васильевич меняет профессию"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назови фильм по обуви",
+                    "image": "images/film_po_obuvi1.png",
+                    "options": [
+                        "Леон"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "УПС ЭТО МОДИФИКАТОР! Минус 1000 баллов",
+                    "options": [
+                        "РЕШАЕТ ВЕДУЩИЙ!"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Не пелмени",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Как называются эти пельмени",
+                    "image": "images/ne_pelmeni5.png",
+                    "options": [
+                        "Хинкали"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Как называются эти пельмени",
+                    "image": "images/ne_pelmeni4.png",
+                    "options": [
+                        "Вареники"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Как называются эти пельмени",
+                    "image": "images/ne_pelmeni1.png",
+                    "options": [
+                        "Гёдза"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Как называются эти пельмени",
+                    "image": "images/ne_pelmeni2.png",
+                    "options": [
+                        "Манты"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Как называются эти пельмени",
+                    "image": "images/ne_pelmeni3.png",
+                    "options": [
+                        "Буузы"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Инстуркции IKEA",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Инструкция к какому персонажу это",
+                    "image": "images/instruksiya_ikea3.png",
+                    "options": [
+                        "Девочька из фильма звонок (Самара)"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Инструкция к какому персонажу это",
+                    "image": "images/instruksiya_ikea2.png",
+                    "options": [
+                        "Джейсон Вурхиз (Пятница 13)"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Инструкция к какому персонажу это",
+                    "image": "images/instruksiya_ikea1.png",
+                    "options": [
+                        "Эдвард руки-ножницы"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Инструкция к какому персонажу это",
+                    "image": "images/instruksiya_ikea5.png",
+                    "options": [
+                        "Человеческая многоножка"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Инструкция к какому персонажу это",
+                    "image": "images/instruksiya_ikea4.png",
+                    "options": [
+                        "Фредди Крюгер (Кошмар на улице Вязов)"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Технолоджи",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "text",
+                    "question": "ЭТО МОДИФИКАТОР РУЛЕТКА, Получи 2000 баллов если угадаешь, Красное, Черное или Зеро",
+                    "options": [
+                        "Зеро"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "text",
+                    "question": "За века использования конного транспорта дороги оказались усыпаны гвоздями, которые выпдалали из подков. С тех пор ЕГО наличие в автомоболях стало необходимым и обязательным",
+                    "options": [
+                        "Запасное колесо"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "text",
+                    "question": "Сейчас только 12% видят черно-белые сны, хотя еще полвека назад их количество составляло 75%. Развитие ЧЕГО снизило процент черно-белых снов",
+                    "options": [
+                        "Цветно телевидение"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "text",
+                    "question": "Согласно странице Википедии 'Хронология Ирландских изобретений и открытий' после изобретения ЕГО в 14 веке у ирландцев был 300-летний перерыв до следущего открытия",
+                    "options": [
+                        "Виски"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "text",
+                    "question": "Это сейчас ОНА гипотетическая и воображаемая, в XIX веке была вполне реальной, сделанной из латуни и использовать для фокусирования внимания детей в момент фотографирования",
+                    "options": [
+                        "Птичка"  
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Без шерсти",
+            "questions": [
+                {
+                    "id": 1,
+                    "type": "image",
+                    "question": "Назовите животное без шерсти",
+                    "image": "images/bez_shersti5.png",
+                    "options": [
+                        "Пингвин"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "type": "image",
+                    "question": "Назовите животное без шерсти",
+                    "image": "images/bez_shersti1.png",
+                    "options": [
+                        "Ёж"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "type": "image",
+                    "question": "Назовите животное без шерсти",
+                    "image": "images/bez_shersti2.png",
+                    "options": [
+                        "Белка"
+                    ]
+                },
+                {
+                    "id": 4, 
+                    "type": "image",
+                    "question": "Назовите животное без шерсти",
+                    "image": "images/bez_shersti3.png",
+                    "options": [
+                        "Медведь"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "type": "image",
+                    "question": "Назовите животное без шерсти",
+                    "image": "images/bez_shersti4.png",
+                    "options": [
+                        "Енот"  
+                    ]
+                }
+            ]
         }
     ]
 }

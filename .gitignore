@@ -70,8 +70,9 @@ node_modules/
 
 .firebaserc
 
-package-lock.json
-package.json
 
 public/backend/firebase.js
 
+data
+
+images
