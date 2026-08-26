@@ -466,26 +466,31 @@ async function changeSelectedPlayerScore(sign) {
 
   if (!player) {
     selectedPlayerId = null;
+
     plusBtn.style.display = "none";
     minusBtn.style.display = "none";
+
     return;
   }
 
   const currentScore = Number(player.score || 0);
   const newScore = currentScore + sign * value;
+
+  // Добавляем изменения игрока
   await update(playerRef, {
     score: newScore
   });
 
-  // ВАЖНО:
-  //
-  // Здесь специально НЕТ:
-  //
-  // currentQuestion: null
-  // answeringPlayer: null
-  // blockedPlayers: null
-  //
-  // Поэтому вопрос остаётся открытым.
+  // Если ведущий СНЯЛ баллы
+  if (sign === -1) {
+    await update(roomRef, {
+      // Игрок больше не отвечает
+      answeringPlayer: null,
+
+      // Блокируем этого игрока
+      [`blockedPlayers/${selectedPlayerId}`]: true
+    });
+  }
 }
 
 
